@@ -1,0 +1,207 @@
+.clearfix() {
+	&:after {
+		display: table;
+		clear: both;
+		content: "";
+	}
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.visually-hidden() {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.no-list() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container() {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.inner() {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  .tablet({
+    padding-right: 25px;
+    padding-left: 25px;
+  });
+
+  .mobile({
+    padding-right: 15px;
+    padding-left: 15px;
+  });
+}
+
+.desktop (@rules) {
+		@media (min-width: 1441px) and (max-width: 1920px) {
+			@rules();
+		}
+}
+
+.desktop-s (@rules) {
+		@media (min-width: 1367px) and (max-width: 1440px) {
+			@rules();
+		}
+}
+
+.laptop (@rules) {
+		@media (min-width: 1200px) {
+			@rules();
+		}
+}
+
+.tablet (@rules) {
+		@media (min-width: 768px) and (max-width: 1199px) {
+			@rules();
+		}
+}
+
+.mobile (@rules) {
+		@media (max-width: 767px) {
+			@rules();
+		}
+}
+
+.mobile-and-tablet (@rules) {
+		@media (max-width: 768px) {
+			@rules();
+		}
+}
+
+.mobile-header (@rules) {
+		@media (max-width: 900px) {
+			@rules();
+		}
+}
+
+.mobile-landscape (@rules) {
+		@media (max-width: 649px) and (orientation: landscape) {
+			@rules();
+		}
+}
+
+.mobile-small (@rules) {
+		@media (max-width: 420px) {
+			@rules();
+		}
+}
+
+/* ----------------------------------- screen-width-flags ----------------------------------- */
+.adaptive-flag {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: -1000;
+		width: 1px;
+		height: 1px;
+
+		@media (max-width: 1024px) {
+			display: block;
+		}
+}
+
+.tablet-flag {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: -1000;
+		width: 1px;
+		height: 1px;
+
+    .tablet ({
+        display: block;
+    });
+
+    .mobile ({
+        display: none;
+    });
+}
+
+.mobile-flag {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: -1000;
+		width: 1px;
+		height: 1px;
+
+		.tablet ({
+        display: none;
+    });
+
+    .mobile ({
+        display: block;
+    });
+}
+
+.desktop-only {
+		display: block;
+
+		.tablet ({
+        display: none;
+    });
+
+    .mobile ({
+        display: none;
+    });
+}
+
+.adaptive-only {
+    display: none;
+
+    .tablet ({
+        display: block;
+    });
+
+    .mobile ({
+        display: block;
+    });
+}
+
+.tablet-only {
+    display: none;
+
+    .tablet ({
+        display: block;
+    });
+
+    .mobile ({
+        display: none;
+    });
+}
+
+.mobile-only {
+		display: none;
+
+		.mobile ({
+        display: block;
+    });
+}
+
+.mobile-hidden {
+		.mobile ({
+				display: none!important;
+		});
+}

@@ -1,0 +1,184 @@
+// LESS-Prefixer/
+
+.transition(@prop: @transition-prop, @time: @transition-duration, @ease: @transition-timing-function) {
+	-webkit-transition: @prop @time @ease;
+  -o-transition: @prop @time @ease;
+  transition: @prop @time @ease;
+}
+
+.box-shadow(@args) {
+	-webkit-box-shadow: @args;
+	box-shadow: @args;
+}
+
+.inner-shadow(@args) {
+	.box-shadow(inset @args);
+}
+
+.keyframes(@name; @args) {
+	@-webkit-keyframes @name {
+		@args();
+	}
+	@-moz-keyframes @name {
+		@args();
+	}
+	@-o-keyframes @name {
+		@args();
+	}
+	@keyframes @name {
+		@args();
+	}
+}
+
+.animation(@args) {
+	-webkit-animation: @args;
+	-moz-animation: @args;
+	-o-animation: @args;
+	animation: @args;
+}
+
+.transform(@args) {
+	-webkit-transform: @args;
+	-ms-transform: @args;
+	transform: @args;
+}
+
+.translate(@x, @y) {
+	.transform(translate(@x, @y));
+}
+
+.translateX(@x) {
+	.transform(translateX(@x));
+}
+
+.translateY(@y) {
+	.transform(translateY(@y));
+}
+
+.rotate(@deg: 45deg) {
+	.transform(rotate(@deg));
+}
+
+.scale(@factor: .5) {
+	.transform(scale(@factor));
+}
+
+.translate3d(@x, @y, @z) {
+	.transform(translate3d(@x, @y, @z));
+}
+
+.flex-block() {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.inline-flex-block() {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+.flex-grow(@grow: 1) {
+	-moz-flex-grow: @grow;
+	-ms-flex-grow: @grow;
+	-webkit-flex-grow: @grow;
+	flex-grow: @grow;
+}
+
+.flex-shrink(@shrink: 1) {
+	-moz-flex-shrink: @shrink;
+	-ms-flex-shrink: @shrink;
+	-webkit-flex-shrink: @shrink;
+	flex-shrink: @shrink;
+}
+
+.flex-basis(@basis: auto) {
+	-moz-flex-basis: @basis;
+	-ms-flex-basis: @basis;
+	-webkit-flex-basis: @basis;
+	flex-basis: @basis;
+}
+
+.order(@order: 0) {
+	-webkit-box-ordinal-group: @order;
+	-moz-box-ordinal-group: @order;
+	-ms-box-ordinal-group: @order;
+	-ms-flex-order: @order;
+	-webkit-order: @order;
+	-moz-order: @order;
+	-ms-order: @order;
+	order: @order;
+}
+
+.flex-direction(@direction: row) {
+	-webkit-flex-direction: @direction;
+	-moz-flex-direction: @direction;
+	-ms-flex-direction: @direction;
+	flex-direction: @direction;
+}
+
+.flex-wrap(@wrap: nowrap) {
+	-webkit-flex-wrap: @wrap;
+	-moz-flex-wrap: @wrap;
+	-ms-flex-wrap: @wrap;
+	flex-wrap: @wrap;
+}
+
+.justify-content(@justification) {
+	-webkit-box-pack: @justification;
+	-moz-box-pack: @justification;
+	-ms-flex-pack: replace(@justification, "flex-", "");
+	-webkit-justify-content: @justification;
+	justify-content: @justification;
+}
+
+.align-items(@mode) {
+	-webkit-box-align: @mode;
+	-moz-box-align: @mode;
+	-ms-flex-align: @mode;
+	-webkit-align-items: @mode;
+	align-items: @mode;
+}
+
+.align-content(@mode) {
+	-webkit-box-align: @mode;
+	-moz-box-align: @mode;
+	-ms-flex-align: @mode;
+	-webkit-align-content: @mode;
+	align-content: @mode;
+}
+
+.align-self(@mode) {
+	-webkit-box-align: @mode;
+	-moz-box-align: @mode;
+	-ms-flex-align: @mode;
+	-webkit-align-self: @mode;
+	align-self: @mode;
+}
+
+.input-placeholder(@ruleset){
+    ::-webkit-input-placeholder {
+        @ruleset();
+    }
+
+    :-moz-placeholder {
+        @ruleset();
+    }
+
+    ::-moz-placeholder {
+        @ruleset();
+    }
+
+    :-ms-input-placeholder {
+        @ruleset();
+    }
+
+    ::-ms-input-placeholder {
+        @ruleset();
+    }
+}
+
+.linear-gradient(@args) {
+	background-image: linear-gradient(@args);
+}
