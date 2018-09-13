@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temp</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="styles/style.min.css" rel="stylesheet">
+  </head>
+  <body class="page">
+    <article class="claim">
+      <div class="claim__inner">
+        <h3 class="claim__header">Оставьте заявку прямо сейчас и получите полировку фар<br><span class="claim__header-capital">совершенно бесплатно!</span></h3>
+        <form class=claim__form action="send.php" method="post">
+          <label class="visually-hidden" for="user-name">Как Вас зовут?</label>
+          <input class="claim__name" id="user-name" name="user-name" type="text" placeholder="Ваше имя" required></input>
+          <label class="visually-hidden" for="user-phone">Введите номер телефона</label>
+          <input class="claim__name" id="user-phone" name="user-phone" type="tel" placeholder="Номер телефона" required pattern=\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}></input>
+          <button class="claim__button button" type="submit">Оставить заявку</button>
+        </form>
+      </div>
+    </article>
+  </body>
+</html>
