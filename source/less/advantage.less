@@ -1,8 +1,9 @@
 .advantage {
-  padding-left: 20px;
-  padding-right: 20px;
-  background: url("../images/advantage-back.svg") no-repeat 0 -123px,
-    url("../images/advantage-gradient.png") no-repeat 0 300px;
+  padding: 0 20px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  background: url("../images/advantage-back.svg") no-repeat 0 -128px,
+    url("../images/advantage-gradient.png") no-repeat 0 341px;
 }
 
 .advantage__list {
@@ -30,5 +31,66 @@
 
   &:nth-child(6) {
     padding-right: 12px;
+  }
+}
+
+.advantage__header {
+  margin-bottom: 10px;
+  padding-right: 80px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .advantage {
+    background: url("../images/car.svg") no-repeat 18px 100%;
+    min-height: 696px;
+  }
+
+  .advantage__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .advantage__item {
+    width: 195px;
+    line-height: 23px;
+    padding-right: 0;
+    margin-right: 30px;
+    margin-bottom: 0;
+    &:nth-child(2) {
+      order: 4;
+      width: 210px;
+      margin-right: 15px;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+      width: 240px;
+      margin-bottom: 16px;
+    }
+
+    &:nth-child(4) {
+      order: 3;
+      width: 220px;
+      margin-right: 0;
+      margin-left: 12px;
+      margin-bottom: 16px;
+    }
+
+    &:nth-child(5) {
+      order: 5;
+    }
+
+    &:nth-child(6) {
+      order: 6;
+      width: 220px;
+      margin-right: 0;
+      margin-left: 57px;
+    }
+  }
+
+  .advantage__header {
+    width: 650px;
+    margin-bottom: 7px;
   }
 }
