@@ -1,0 +1,131 @@
+.footer {
+  background-color: @black;
+  color: @white;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: @footer-font;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.footer__menu-list {
+  padding: 0 0 0 19px;
+  margin: 0 0 0 8px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__social-list{
+  margin: 26px 0 35px 29px;
+}
+
+.footer__menu-link {
+  color: @white;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: @footer-font;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 12px;
+}
+
+.footer__menu-item {
+  width: 50%;
+
+  &:nth-child(2n) {
+    padding-left: 10px;
+  }
+}
+
+.footer__adress {
+  border-top: 1px solid @blue;
+  text-transform: uppercase;
+  margin: 0 20px;
+  padding-top: 22px;
+  padding-left:7px;
+
+  span {
+    display: block;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+  }
+}
+
+.footer__logo {
+  margin-top: 28px;
+  width: 128px;
+  height: 28px;
+}
+
+.footer__phone {
+  margin: 16px 0 0 24px;
+}
+
+.footer__worktime {
+  margin: 5px 0 21px 24px;
+}
+
+@media(min-width: 768px) {
+  .footer {
+    padding-top: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer__social-list {
+    order: 1;
+  }
+
+  .footer__adress {
+    width: 728px;
+    margin-top: 22px;
+    padding-top: 45px;
+    padding-left: 0;
+
+    & span {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+
+  .footer__menu-list {
+    width: 350px;
+    margin-left: 52px;
+    margin-top: 2px;
+  }
+
+  .footer__menu-link {
+    margin-bottom: 9px;
+  }
+
+  .footer__social-list {
+    margin-left: auto;
+    margin-top: -41px;
+    margin-right: 20px;
+  }
+
+  .footer__logo {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  .footer__menu-item {
+    &:nth-child(2n) {
+      padding-left: 35px;
+    }
+  }
+
+  .footer__phone {
+    margin-top: 2px;
+  }
+
+  .footer__contacts-wrapper {
+    margin-left: 45px;
+  }
+}

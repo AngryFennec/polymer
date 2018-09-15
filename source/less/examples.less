@@ -1,0 +1,162 @@
+.examples {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.examples__header {
+  padding-left: 3px;
+  margin-top: 11px;
+}
+
+.examples__video {
+  position: relative;
+  margin-top: 14px;
+  width: 280px;
+  height: 180px;
+  background: url("../images/video-img.jpg") no-repeat 0 0;
+}
+
+.examples__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.examples__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+}
+
+.examples__block {
+  position: relative;
+  margin-top: 20px;
+  width: 280px;
+  height: 180px;
+
+  &--1 {
+    background: url("../images/work1-mobile.jpg") no-repeat 0 0;
+  }
+
+  &--2 {
+    background: url("../images/work2-mobile.jpg") no-repeat 0 0;
+  }
+
+  &--3,
+  &--4 {
+    display: none;
+  }
+}
+
+.examples__button {
+  align-self: center;
+  background: transparent;
+  border: none;
+  margin-top: 15px;
+}
+
+.examples__description {
+  position: absolute;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: @main-font-bold;
+  text-shadow: 2px 2px 2px #000;
+  margin-top: 135px;
+  padding-left: 8px;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .examples {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: url("../images/work-back1.svg") no-repeat 100% 116.4%;
+
+  }
+
+  .examples__header {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .examples__video {
+    width: 730px;
+    height: 430px;
+    background: url("../images/video-img-tab.jpg") no-repeat 0 0;
+    margin-top: 25px;
+
+    & .examples__description {
+      font-size: 25px;
+      padding-bottom: 33px;
+      padding-left: 20px;
+      padding-top: 22px;
+    }
+  }
+
+  .examples__block {
+    display: block;
+    margin-top: 30px;
+
+    &--1 {
+      background: url("../images/work1-tablet.jpg") no-repeat 0 0;
+      width: 445px;
+      height: 249px;
+      order: 1;
+    }
+
+    &--4 {
+      background: url("../images/work4-tablet.jpg") no-repeat 0 0;
+      width: 256px;
+      height: 249px;
+      order: 2;
+    }
+
+    &--3 {
+      background: url("../images/work3-tablet.jpg") no-repeat 0 0;
+      width: 350px;
+      height: 300px;
+      order: 3;
+    }
+
+    &--2 {
+      background: url("../images/work2-tablet.jpg") no-repeat 0 0;
+      width: 347px;
+      height: 300px;
+      order: 4;
+    }
+  }
+
+  .examples__button {
+    display: none;
+  }
+
+  .examples__description {
+    margin: 0;
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    font-size: 17px;
+    line-height: 21px;
+    padding-top: 14px;
+    padding-bottom: 20px;
+  }
+
+  .examples__play-button {
+    transform: translateX(-50%) translateY(-50%) scale(2.5);
+  }
+}
