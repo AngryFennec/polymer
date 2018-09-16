@@ -1,0 +1,29 @@
+.aside {
+  padding-top: 316px;
+  padding-bottom: 400px;
+  width: 430px;
+  padding-left: 117px;
+  font-family: @main-font;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: @placeholder;
+}
+
+.aside__list {
+  .no-list();
+  margin: 0 auto;
+}
+
+.aside__list-item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--active {
+    font-family: @main-font-semi;
+    color: @dark;
+  }
+}
