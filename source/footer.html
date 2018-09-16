@@ -40,6 +40,7 @@
       <section class="examples">
         <h2 class="examples__header h2">наши работы</h2>
         <div class="examples__video">
+          <iframe class="examples__frame" src="https://www.youtube.com/embed/R28lU1Ua8J0" allowfullscreen></iframe>
           <div class="examples__overlay">
             <button class="examples__play-button">
               <img class="examples__play" src="images/play.svg" alt="play">
@@ -223,6 +224,47 @@
         </button>
         <button class="review__open-form-button button">Написать отзыв</button>
         <div class="review__back"></div>
+
+        <form action="post-review.php" methid="post" class="review__form visually-hidden">
+          <input class="review__form-input" type="text" name="user-name" id="user-name" required placeholder="Ваше имя">
+          <label for="user-name" class="review__form-label visually-hidden"></label>
+          <div class="review__form-rating-block">
+            <input class="review__form-radio visually-hidden" type="radio" name="rating" id="rating-1" value="1">
+            <label for="rating-1">
+                <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.86474 1.26129C6.15913 0.329749 7.47737 0.329751 7.77177 1.2613L8.67199 4.10982C8.80344 4.52574 9.18931 4.80848 9.62551 4.80848H12.5964C13.5584 4.80848 13.9656 6.03394 13.1949 6.60964L10.7441 8.44033C10.4033 8.6949 10.2608 9.13722 10.389 9.54283L11.3138 12.4691C11.6065 13.3953 10.54 14.1529 9.76182 13.5716L7.4167 11.8198C7.06178 11.5547 6.57473 11.5547 6.2198 11.8198L3.87468 13.5716C3.09646 14.1529 2.03001 13.3953 2.32272 12.4691L3.24751 9.54283C3.3757 9.13722 3.23325 8.6949 2.89244 8.44033L0.441638 6.60964C-0.329074 6.03394 0.0780933 4.80848 1.04009 4.80848H4.011C4.4472 4.80848 4.83307 4.52574 4.96451 4.10982L5.86474 1.26129Z" fill="#0047FF"/>
+                </svg>
+            </label>
+            <input class="review__form-radio visually-hidden" type="radio" name="rating" id="rating-2" value="2">
+            <label for="rating-2">
+                <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.86474 1.26129C6.15913 0.329749 7.47737 0.329751 7.77177 1.2613L8.67199 4.10982C8.80344 4.52574 9.18931 4.80848 9.62551 4.80848H12.5964C13.5584 4.80848 13.9656 6.03394 13.1949 6.60964L10.7441 8.44033C10.4033 8.6949 10.2608 9.13722 10.389 9.54283L11.3138 12.4691C11.6065 13.3953 10.54 14.1529 9.76182 13.5716L7.4167 11.8198C7.06178 11.5547 6.57473 11.5547 6.2198 11.8198L3.87468 13.5716C3.09646 14.1529 2.03001 13.3953 2.32272 12.4691L3.24751 9.54283C3.3757 9.13722 3.23325 8.6949 2.89244 8.44033L0.441638 6.60964C-0.329074 6.03394 0.0780933 4.80848 1.04009 4.80848H4.011C4.4472 4.80848 4.83307 4.52574 4.96451 4.10982L5.86474 1.26129Z" fill="#0047FF"/>
+                </svg>
+            </label>
+            <input class="review__form-radio visually-hidden" type="radio" name="rating" id="rating-3" value="3">
+            <label for="rating-3">
+                <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.86474 1.26129C6.15913 0.329749 7.47737 0.329751 7.77177 1.2613L8.67199 4.10982C8.80344 4.52574 9.18931 4.80848 9.62551 4.80848H12.5964C13.5584 4.80848 13.9656 6.03394 13.1949 6.60964L10.7441 8.44033C10.4033 8.6949 10.2608 9.13722 10.389 9.54283L11.3138 12.4691C11.6065 13.3953 10.54 14.1529 9.76182 13.5716L7.4167 11.8198C7.06178 11.5547 6.57473 11.5547 6.2198 11.8198L3.87468 13.5716C3.09646 14.1529 2.03001 13.3953 2.32272 12.4691L3.24751 9.54283C3.3757 9.13722 3.23325 8.6949 2.89244 8.44033L0.441638 6.60964C-0.329074 6.03394 0.0780933 4.80848 1.04009 4.80848H4.011C4.4472 4.80848 4.83307 4.52574 4.96451 4.10982L5.86474 1.26129Z" fill="#0047FF"/>
+                </svg>
+            </label>
+            <input class="review__form-radio visually-hidden" type="radio" name="rating" id="rating-4" value="4">
+            <label for="rating-4">
+                <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.86474 1.26129C6.15913 0.329749 7.47737 0.329751 7.77177 1.2613L8.67199 4.10982C8.80344 4.52574 9.18931 4.80848 9.62551 4.80848H12.5964C13.5584 4.80848 13.9656 6.03394 13.1949 6.60964L10.7441 8.44033C10.4033 8.6949 10.2608 9.13722 10.389 9.54283L11.3138 12.4691C11.6065 13.3953 10.54 14.1529 9.76182 13.5716L7.4167 11.8198C7.06178 11.5547 6.57473 11.5547 6.2198 11.8198L3.87468 13.5716C3.09646 14.1529 2.03001 13.3953 2.32272 12.4691L3.24751 9.54283C3.3757 9.13722 3.23325 8.6949 2.89244 8.44033L0.441638 6.60964C-0.329074 6.03394 0.0780933 4.80848 1.04009 4.80848H4.011C4.4472 4.80848 4.83307 4.52574 4.96451 4.10982L5.86474 1.26129Z" fill="#0047FF"/>
+                </svg>
+            </label>
+            <input class="review__form-radio visually-hidden" type="radio" name="rating" id="rating-5" value="5">
+            <label for="rating-5">
+                <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.86474 1.26129C6.15913 0.329749 7.47737 0.329751 7.77177 1.2613L8.67199 4.10982C8.80344 4.52574 9.18931 4.80848 9.62551 4.80848H12.5964C13.5584 4.80848 13.9656 6.03394 13.1949 6.60964L10.7441 8.44033C10.4033 8.6949 10.2608 9.13722 10.389 9.54283L11.3138 12.4691C11.6065 13.3953 10.54 14.1529 9.76182 13.5716L7.4167 11.8198C7.06178 11.5547 6.57473 11.5547 6.2198 11.8198L3.87468 13.5716C3.09646 14.1529 2.03001 13.3953 2.32272 12.4691L3.24751 9.54283C3.3757 9.13722 3.23325 8.6949 2.89244 8.44033L0.441638 6.60964C-0.329074 6.03394 0.0780933 4.80848 1.04009 4.80848H4.011C4.4472 4.80848 4.83307 4.52574 4.96451 4.10982L5.86474 1.26129Z" fill="#0047FF"/>
+                </svg>
+            </label>
+          </div>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <label for=""></label>
+            <button class="button" type="submit">Отправить</button>
+
+        </form>
       </section>
 
 
@@ -307,6 +349,21 @@
         </p>
       </div>
       </footer>
+      <script>
+      var playButton = document.querySelector(".examples__play-button");
+      var frame = document.querySelector(".examples__frame");
 
+      playButton.addEventListener("click", function() {
+        frame.src +="?autoplay=1";
+        setTimeout(function() {frame.style.display="block"}, 1000);
+      });
+
+      var reviewButton = document.querySelector(".review__open-form-button");
+      var reviewForm = document.querySelector(".review__form");
+
+      reviewButton.addEventListener("click", function() {
+        reviewForm.classList.toggle("visually-hidden");
+      })
+      </script>
   </body>
 </html>
