@@ -1,0 +1,136 @@
+<section class="events-section">
+  <div class="events-section__wrapper">
+    <div class="activity-section-header">
+      <h2 class="section-caption">Другие события</h2>
+      <a href="#0" class="activity-section-header__link">Все события</a>
+    </div>
+    <div class="events-slider js-events-slider">
+      <div class="events-slider__wrapper js-events-slider-wrapper">
+        <div class="events-slider__item js-events-slider-item">
+          <a href="#0" class="events-slider__item-img">
+            <img src="images/upload/events-slider-pic2.png" width="269" height="190" title="Events Baner" alt="Events Baner">
+            <span class="events-slider__flag events-slider__flag--offline">offline</span>
+          </a>
+          <div class="events-slider__item-info">
+            <div class="events-slider__details-wrap">
+              <div class="events-slider__detail events-slider__detail--data">
+                <svg class="events-slider__detail-icon" width="14" height="15"><use xlink:href="icons/sprite.svg#date-icon"></use></svg>
+                12-28 февраля 2017
+              </div>
+              <div class="events-slider__detail events-slider__detail--time">
+                <svg class="events-slider__detail-icon" width="14" height="14"><use xlink:href="icons/sprite.svg#time"></use></svg>
+                16:00 - 19:30
+              </div>
+            </div>
+            <a href="#0" class="events-slider__title">
+              Семинары для профессионалов в сфере культуры и искусства Cultural Skills Academy
+            </a>
+            <div class="events-slider__location-wrap events-slider__location-wrap--short">
+              <a href="#0" class="events-slider__location-link"><svg class="events-slider__location-icon" width="14" height="17"><use xlink:href="icons/sprite.svg#place-icon"></use></svg>
+                Красноярск, ул. Площадь мира, д. 1</a>
+            </div>
+          </div>
+        </div>
+        <div class="events-slider__item js-events-slider-item">
+          <a href="#0" class="events-slider__item-img">
+            <img src="images/upload/events-slider-pic3.png" width="269" height="190" title="Events Baner" alt="Events Baner">
+            <span class="events-slider__flag events-slider__flag--broadcast">Offline с online трансляцией</span>
+          </a>
+          <div class="events-slider__item-info">
+            <div class="events-slider__details-wrap">
+              <div class="events-slider__detail events-slider__detail--data">
+                <svg class="events-slider__detail-icon" width="14" height="15"><use xlink:href="icons/sprite.svg#date-icon"></use></svg>
+                26 января-10 февраля 2018
+              </div>
+            </div>
+            <a href="#0" class="events-slider__title">
+              Студенческие отборы Стипендиальной программы Владимира Потанина
+            </a>
+            <div class="events-slider__location-wrap">
+              <a href="#0" class="events-slider__location-link"><svg class="events-slider__location-icon" width="14" height="17"><use xlink:href="icons/sprite.svg#place-icon"></use></svg>
+                Москва, Казань, Санкт-Петербург</a>
+            </div>
+          </div>
+        </div>
+        <div class="events-slider__item js-events-slider-item">
+          <a href="#0" class="events-slider__item-img">
+            <img src="images/upload/events-slider-pic1.png" width="269" height="190" title="Events Baner" alt="Events Baner">
+            <span class="events-slider__flag events-slider__flag--online">online</span>
+          </a>
+          <div class="events-slider__item-info">
+            <div class="events-slider__details-wrap">
+              <div class="events-slider__detail events-slider__detail--data">
+                <svg class="events-slider__detail-icon" width="14" height="15"><use xlink:href="icons/sprite.svg#date-icon"></use></svg>
+                28 ноября 2017
+              </div>
+              <div class="events-slider__detail events-slider__detail--time">
+                <svg class="events-slider__detail-icon" width="14" height="14"><use xlink:href="icons/sprite.svg#time"></use></svg>
+                15:00-17:00
+              </div>
+            </div>
+            <a href="#0" class="events-slider__title">
+              Дискуссия «Преимущества целевого капитала как инструмента устойчивого финансового развития университета»
+            </a>
+          </div>
+        </div>
+        <div class="events-slider__item js-events-slider-item">
+          <a href="#0" class="events-slider__item-img">
+            <img src="images/upload/events-slider-pic4.png" width="269" height="190" title="Events Baner" alt="Events Baner">
+            <span class="events-slider__flag events-slider__flag--online">online</span>
+          </a>
+          <div class="events-slider__item-info">
+            <div class="events-slider__details-wrap">
+              <div class="events-slider__detail events-slider__detail--time">
+                <svg class="events-slider__detail-icon" width="14" height="14"><use xlink:href="icons/sprite.svg#time"></use></svg>
+                15:00 – 16:40
+              </div>
+            </div>
+            <a href="#0" class="events-slider__title">
+              Вебинары-консультации конкурса «Музейный десант»
+            </a>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="slider-buttons-wrap slider-buttons-wrap--prev js-slider-button-prev"><svg class="slider-buttons-wrap__icon" width="8" height="13"><use xlink:href="icons/sprite.svg#buttons-arrow-left"></use></svg>Button Prev</button>
+      <button type="button" class="slider-buttons-wrap slider-buttons-wrap--next js-slider-button-next"><svg class="slider-buttons-wrap__icon" width="8" height="13"><use xlink:href="icons/sprite.svg#buttons-arrow-right"></use></svg>Button Next</button>
+    </div>
+  </div>
+</section>
+
+<!--events-slider.js-->
+
+var eventsSlider = {
+  init: function() {
+    if($('.js-events-slider').length !== 0) {
+      var mySwiper = new Swiper('.js-events-slider', {
+        slideClass: 'js-events-slider-item',
+        wrapperClass: 'js-events-slider-wrapper',
+        slidesPerView: 4,
+        loop: true,
+        spaceBetween: 30,
+        setWrapperSize: true,
+        nextButton: '.js-slider-button-next',
+        prevButton: '.js-slider-button-prev',
+        breakpoints: {
+          1110: {
+            slidesPerView: 3,
+            spaceBetween: 10
+          },
+          880: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
+          767: {
+            slidesPerView: 'auto',
+            spaceBetween: 30
+          }
+        }
+      });
+    }
+  }
+}
+
+<!--document-ready.js-->
+$(function() {
+  eventsSlider.init();
+});
