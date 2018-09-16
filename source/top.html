@@ -9,7 +9,38 @@
     <link href="styles/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
+    <article class="features">
+      <div class="features__inner">
+        <aside class="aside work__aside">
+          <ul class="aside__list">
+            <li class="aside__list-item">Главная</li>
+            <li class="aside__list-item aside__list-item--active">Преимущества</li>
+            <li class="aside__list-item">Работы</li>
+            <li class="aside__list-item">Отзывы</li>
+            <li class="aside__list-item">Контакты</li>
+          </ul>
+        </aside>
+        <div class="features__content">
+          <h2 class="features__header">Почему именно мы?</h2>
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="features__icon-container">
+                <svg class="features__icon" width="82" height="108"><use xlink:href="icons/sprite.svg#features1"></use></svg>
+              </div>
+              <p class"features__text">Ваш авто будет как новый весь срок службы ПК</p>
+            </li>
+            <li class="features__item"></li>
+            <li class="features__item"></li>
+            <li class="features__item"></li>
+            <li class="features__item"></li>
+            <li class="features__item"></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
     <article class="work">
+    <div class='work__inner'>
       <aside class="aside work__aside">
         <ul class="aside__list">
           <li class="aside__list-item">Главная</li>
@@ -19,9 +50,38 @@
           <li class="aside__list-item">Контакты</li>
         </ul>
       </aside>
-      <div class="work__inner">
+      <div class="work__content">
         <h2 class="work__header">Выберите свой класс</h2>
+        <div class="tabs">
+          <ul class="work__options-list">
+            <li class="work__options-item">Пикапы</li>
+            <li class="work__options-item">Минивены</li>
+            <li class="work__options-item work__options-item--active">Бизнес класс</li>
+            <li class="work__options-item">Средний класс</li>
+            <li class="work__options-item">Внедорожники и кроссоверы</li>
+            <li class="work__options-item">Премиум класс</li>
+          </ul>
+          <div class="tabs__wrapper">
+            <section class="tabs__item">
+              <b class="tabs__item-header">Что входит в стоимость?</b>
+              <ul class="tabs__inner-list">
+                <li class="tabs__inner-item">Мойка авто</li>
+                <li class="tabs__inner-item">Обработка глиной (Koch)</li>
+                <li class="tabs__inner-item">Обезжиривание</li>
+                <li class="tabs__inner-item">Полировка авто (в 3 номера)</li>
+                <li class="tabs__inner-item">Мойка и сушка</li>
+                <li class="tabs__inner-item">Нанесение жидкого стекла SOFT 99 H-7</li>
+                <li class="tabs__inner-item">Сушка (5-7 часов)</li>
+              </ul>
+              <b class="tabs__inner-price"><span class="tabs__inner-price--uppercase">Цена: </span>14 000 рублей.</b>
+              <button class="tabs__inner-button button">Оставить заявку</button>
+            </section>
+          </div>
+        </div>
+        </div>
+
       </div>
+    </div>
     </article>
     <article class="claim">
       <div class="claim__inner">
