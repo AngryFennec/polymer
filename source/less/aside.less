@@ -1,7 +1,13 @@
 .aside {
-  padding-top: 316px;
+  .mobile(@rules: {
+    display: none;
+  });
+  .tablet(@rules: {
+    display: none;
+  });
+  padding-top: 325px;
   padding-bottom: 400px;
-  width: 430px;
+  width: 330px;
   padding-left: 117px;
   font-family: @main-font;
   font-weight: 500;
@@ -16,7 +22,7 @@
 }
 
 .aside__list-item {
-  margin-bottom: 30px;
+  margin-bottom: 42px;
 
   &:last-child {
     margin-bottom: 0;
