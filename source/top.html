@@ -9,6 +9,61 @@
     <link href="styles/style.min.css" rel="stylesheet">
   </head>
   <body class="page">
+    <header class="page-header">
+      <nav class="page-navigation">
+        <div class="nav-container">
+          <article class="header">
+            <picture class="header__logo">
+              <source media="(min-width: 1920px)" srcset="images/logo_desk.png">
+              <img src="images/logo_mobile.png" alt="Логотип">
+            </picture>
+          </article>
+          <ul class="menu">
+            <li class="menu__item"><a href=#>Главная</a></li>
+            <li class="menu__item"><a href=#>Преимущества</a></li>
+            <li class="menu__item"><a href=#>Работы</a></li>
+            <li class="menu__item"><a href=#>Отзывы</a></li>
+            <li class="menu__item"><a href=#>Контакты</a></li>
+          </ul>
+          <div class="menu__outer">
+            <a class="menu__outer-link" href=tel:+74959663120>+7(495)966-31-20</a>
+            <a class="menu__outer-btn button callback">Заказать звонок</a>
+          </div>
+        </div>
+      </nav>
+      <button class="menu__btn menu-button">
+        <span class="menu-button__text">Меню</span>
+      </button>
+    </header>
+    <article class="head">
+      <div class="head__header-container">
+        <h1 class="head__header"> Полимерная керамика - <br> надежная защита для вашего авто</h1>
+      </div>
+      <div class="head__inner">
+        <aside class="aside head__aside">
+          <ul class="aside__list">
+            <li class="aside__list-item aside__list-item--active">Главная</li>
+            <li class="aside__list-item ">Преимущества</li>
+            <li class="aside__list-item">Работы</li>
+            <li class="aside__list-item">Отзывы</li>
+            <li class="aside__list-item">Контакты</li>
+          </ul>
+        </aside>
+        <div class="head__content">
+          <p class="head__advantage">Единственные в России</p>
+          <p class="head__advantage">Срок службы 10-12 лет</p>
+          <p class="head__advantage">Официальная гарантия 3 года</p>
+          <p class="head__advantage">Внешняя защита вашего авто №1 в мире</p>
+          <form class=head__form action="send.php" method="post">
+            <label class="visually-hidden" for="h_user-name">Как Вас зовут?</label>
+            <input class="head__name" id="h_user-name" name="h_user-name" type="text" placeholder="Ваше имя" required></input>
+            <label class="visually-hidden" for="h_user-phone">Введите номер телефона</label>
+            <input class="head__name" id="h_user-phone" name="h_user-phone" type="tel" placeholder="Номер телефона" required pattern=\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}></input>
+            <button class="head__button button" type="submit">Оставить заявку</button>
+          </form>
+        </div>
+      </div>
+    </article>
     <article class="features">
       <div class="features__inner">
         <aside class="aside work__aside">
@@ -132,5 +187,6 @@
         </form>
       </div>
     </article>
+  <script src="script/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,120 @@
+.head {
+  min-height: 1050px;
+  .tablet(@rules: {
+    min-height: 1024px;
+
+  });
+  .mobile(@rules: {
+    min-height: 520px;
+    padding-bottom: 120px;
+  });
+
+}
+
+.head__header-container {
+  margin: 0 auto;
+  width: 1920px;
+  margin-left: 70px;
+}
+.head__inner {
+  margin-top: 68px;
+  margin-bottom: 60px;
+  margin: 0 auto;
+  width: 1920px;
+  .flex-block();
+
+  .tablet(@rules: {
+    width: 768px;
+    margin-bottom: 0;
+    margin-top: 0;
+    .flex-block();
+    .flex-direction(column);
+  });
+
+  .mobile(@rules: {
+    width: 320px;
+    margin-bottom: 0;
+    margin-top: 0;
+    .flex-block();
+    .flex-direction(column);
+  });
+
+  .aside {
+    padding-top: 60px;
+  }
+}
+
+.head__content {
+  width: 1270px;
+  padding-top: 27px;
+  min-height: 702px;
+  border: 0.5px solid @blue;
+  padding-left: 20px;
+  .tablet(@rules: {
+    width: 768px;
+    padding-top: 35px;
+  });
+
+  .mobile(@rules: {
+    width: 320px;
+    padding-top: 0;
+  });
+}
+
+.head__form {
+  .mobile(@rules: {
+    .flex-block();
+    .flex-direction(column);
+    margin: 0 auto;
+  });
+  .tablet(@rules: {
+    .flex-block();
+    .flex-direction(column);
+
+  });
+  .flex-block();
+  .flex-direction(column);
+  .justify-content(flex-start);
+
+  input::placeholder {
+    font-family: @main-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    color: @placeholder;
+  }
+
+  input {
+    .mobile(@rules: {
+      width: 280px;
+      margin-right: 0;
+      margin-bottom: 20px;
+      height: 35px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    });
+    .tablet(@rules: {
+      margin-bottom: 20px;
+    });
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 45px;
+    width: 400px;
+    margin-right: 20px;
+    border: 0.5px solid #0047FF;
+  }
+}
+
+.head__button {
+  .mobile(@rules: {
+    margin-left: 0;
+    width: 170px;
+    font-size: 15px;
+    line-height: 26px;
+    padding-left: 0;
+    padding-right: 0;
+    height: 32px;
+  });
+}
