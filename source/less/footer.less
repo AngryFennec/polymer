@@ -1,5 +1,10 @@
-.footer {
+.main-footer {
+  width: 100%;
   background-color: @black;
+}
+.footer {
+  width: 320px;
+  margin: 0 auto;
   color: @white;
   font-size: 12px;
   line-height: 16px;
@@ -32,6 +37,11 @@
   font-size: 12px;
   line-height: 16px;
   margin-bottom: 12px;
+
+  &:hover {
+    color: @blue;
+  }
+
 }
 
 .footer__menu-item {
@@ -73,6 +83,7 @@
 
 @media(min-width: 768px) {
   .footer {
+    width: 768px;
     padding-top: 40px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -127,5 +138,26 @@
 
   .footer__contacts-wrapper {
     margin-left: 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    width: 1200px;
+    padding-top: 60px;
+  }
+
+  .footer__menu-list {
+    margin-bottom: 50px;
+  }
+
+  .footer__adress {
+    width: 1180px;
+    order: 2;
+  }
+
+  .footer__social-list {
+    margin-top: 8px;
+    margin-right: 20px;
   }
 }

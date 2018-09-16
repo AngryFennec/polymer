@@ -1,7 +1,14 @@
 .examples {
+  width: 320px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 20px;
+  position: relative;
+}
+
+.examples__back {
+  position: absolute;
 }
 
 .examples__header {
@@ -65,6 +72,9 @@
   background: transparent;
   border: none;
   margin-top: 15px;
+
+  & span {
+    display: none;  }
 }
 
 .examples__description {
@@ -83,6 +93,7 @@
 
 @media (min-width: 768px) {
   .examples {
+    width: 768px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -143,7 +154,8 @@
   }
 
   .examples__button {
-    display: none;
+    order: 10;
+    margin: 0 auto;
   }
 
   .examples__description {
@@ -158,5 +170,103 @@
 
   .examples__play-button {
     transform: translateX(-50%) translateY(-50%) scale(2.5);
+  }
+}
+
+@media (min-width: 1200px) {
+  .examples {
+    background: transparent;
+    padding: 0 ;
+    padding-left: 20px;
+    width: 1200px;
+
+  }
+  .examples__header {
+    width: 100%;
+    margin-top: 60px;
+    margin-left: 5px;
+    order: -2;
+    margin-bottom: 20px;
+  }
+
+  .examples__video {
+    width: 682px;
+    height: 430px;
+    order: 0;
+    margin-top: 30px;
+    background: url("../images/video-img-desktop.jpg") no-repeat 0 0;
+  }
+
+  .examples__block {
+    margin-top: 20px;
+    &--1 {
+      margin-top: 30px;
+      order: -1;
+      width: 480px;
+      height: 249px;
+      background: url("../images/work1-desktop.jpg") no-repeat 0 0;
+    }
+
+    &--3 {
+      margin-top: -160px;
+      order: 1;
+      width: 482px;
+      height: 530px;
+      background: url("../images/work3-desktop.jpg") no-repeat 0 0;
+    }
+
+    &--2 {
+      order: 2;
+      width: 382px;
+      height: 349px;
+      background: url("../images/work2-desktop.jpg") no-repeat 0 0;
+    }
+
+    &--4 {
+      order: 3;
+      width: 282px;
+      height: 349px;
+      background: url("../images/work4-desktop.jpg") no-repeat 0 0;
+    }
+  }
+
+  .examples__description {
+    background-color: transparent;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 24px;
+
+  }
+
+  .examples__button {
+    font-family: @main-font-semi;
+    background-color: #ffffff;
+    width: 206px;
+    border: 2px solid @blue;
+    margin-top: 49px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 5px 0 5px 0;
+
+    & span {
+      display: block;
+      font-size: 18px;
+      line-height: 31px;
+      color: @blue;
+    }
+
+    & img {
+      display: none;
+    }
+  }
+
+  .examples__back {
+    width: 1920px;
+    height: 100%;
+    background: url("../images/examples-back1.svg") no-repeat 0 401px;
+    z-index: -1;
+    top: 0;
+    left: -360px;
   }
 }
