@@ -18,6 +18,11 @@
   font-size: 35px;
   text-transform: uppercase;
   color: #000000;
+  margin-top: 42px;
+  margin-left: 120px;
+  .tablet(@rules: {
+    margin-bottom: 0;
+  });
 
   .mobile(@rules: {
     line-height: 21px;
@@ -33,6 +38,10 @@
   .tablet(@rules: {
     margin: 0 auto;
     width: 768px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 150px;
+    margin-bottom: 0;
   });
   .mobile(@rules: {
     margin: 0 auto;
@@ -46,18 +55,25 @@
   margin-bottom: 60px;
   margin: 0 auto;
   width: 1920px;
+  z-index: 10;
+  position: relative;
   .flex-block();
+  background: url("/images/head-desktop.png") 640px 80px no-repeat;
 
   .tablet(@rules: {
     width: 768px;
+    z-index: 10;
+    position: relative;
     margin-bottom: 0;
     margin-top: 0;
     .flex-block();
     .flex-direction(column);
+    background: url("/images/head-tablet.png") 35px 240px no-repeat;
   });
 
   .mobile(@rules: {
     z-index: 10;
+    position: relative;
     width: 320px;
     margin-bottom: 0;
     margin-top: 0;
@@ -76,18 +92,22 @@
 
 .head__content {
   width: 1270px;
-  padding-top: 27px;
+  padding-top: 30px;
   min-height: 702px;
   border: 0.5px solid @blue;
-  padding-left: 20px;
+  padding-left: 37px;
+  margin-left: 45px;
   font-family: @main-font;
-
-
-color: #000000;
+  margin-top: -22px;
+  line-height: 35px;
+  font-size: 20px;
+  color: #000000;
 
   .tablet(@rules: {
     width: 768px;
-    padding-top: 35px;
+
+    line-height: 35px;
+    font-size: 20px;
     border: none;
   });
 
@@ -115,11 +135,13 @@ color: #000000;
   .tablet(@rules: {
     .flex-block();
     .flex-direction(column);
+    margin-top: 20px;
 
   });
   .flex-block();
   .flex-direction(column);
   .justify-content(flex-start);
+  margin-top: 25px;
 
   input::placeholder {
     font-family: @main-font;
@@ -140,19 +162,21 @@ color: #000000;
     });
     .tablet(@rules: {
       margin-bottom: 20px;
+      width: 350px;
     });
     margin-bottom: 30px;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     height: 45px;
-    width: 400px;
+    width: 355px;
     margin-right: 20px;
     border: 0.5px solid #0047FF;
   }
 }
 
 .head__button {
+  margin-top: -15px;
   .mobile(@rules: {
     margin-left: 0;
     width: 170px;
