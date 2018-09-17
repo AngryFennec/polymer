@@ -1,20 +1,45 @@
 .head {
   min-height: 1050px;
   .tablet(@rules: {
-    min-height: 1024px;
+    min-height: 700px;
 
   });
   .mobile(@rules: {
-    min-height: 520px;
-    padding-bottom: 120px;
+    min-height: 450px;
+        z-index: 10;
+
   });
 
+}
+
+.head__header {
+  font-family: @main-font-bold;
+  line-height: 51px;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #000000;
+
+  .mobile(@rules: {
+    line-height: 21px;
+    font-size: 15px;
+    padding-right: 20px;
+    margin-bottom: 0px;
+  });
 }
 
 .head__header-container {
   margin: 0 auto;
   width: 1920px;
-  margin-left: 70px;
+  .tablet(@rules: {
+    margin: 0 auto;
+    width: 768px;
+  });
+  .mobile(@rules: {
+    margin: 0 auto;
+    padding-left: 20px;
+    width: 320px;
+    margin-bottom: 10px;
+  });
 }
 .head__inner {
   margin-top: 68px;
@@ -32,11 +57,16 @@
   });
 
   .mobile(@rules: {
+    z-index: 10;
     width: 320px;
     margin-bottom: 0;
     margin-top: 0;
     .flex-block();
     .flex-direction(column);
+    background: url("/images/head-mobile.png") 40px 200px no-repeat,
+    url("/images/head-mobile-pseudo3.png") 0px 160px no-repeat,
+    url("/images/head-mobile-pseudo1.png") 50px 295px no-repeat,
+    url("/images/head-mobile-pseudo2.png") 00px 310px no-repeat;
   });
 
   .aside {
@@ -50,15 +80,29 @@
   min-height: 702px;
   border: 0.5px solid @blue;
   padding-left: 20px;
+  font-family: @main-font;
+
+
+color: #000000;
+
   .tablet(@rules: {
     width: 768px;
     padding-top: 35px;
+    border: none;
   });
 
   .mobile(@rules: {
     width: 320px;
     padding-top: 0;
+    border: none;
+    min-height: 450px;
+    line-height: 18px;
+    font-size: 12px;
   });
+}
+.head__advantage {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .head__form {
@@ -66,6 +110,7 @@
     .flex-block();
     .flex-direction(column);
     margin: 0 auto;
+    margin-top: 15px;
   });
   .tablet(@rules: {
     .flex-block();
@@ -88,7 +133,7 @@
     .mobile(@rules: {
       width: 280px;
       margin-right: 0;
-      margin-bottom: 20px;
+      margin-bottom: 9px;
       height: 35px;
       padding-top: 5px;
       padding-bottom: 5px;
@@ -117,4 +162,6 @@
     padding-right: 0;
     height: 32px;
   });
+
+
 }

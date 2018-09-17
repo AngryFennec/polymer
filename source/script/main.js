@@ -1,5 +1,5 @@
 (function () {
-
+/*
   //запуск видео по кнопке
   var playButton = document.querySelector(".examples__play-button");
   var frame = document.querySelector(".examples__frame");
@@ -115,7 +115,7 @@
       $(svg[i]).css("fill", "#0047FF");
     });
 
-
+*/
  var burger = document.querySelector(".menu-button");
    var menu = document.querySelector(".nav-container");
 
@@ -128,4 +128,3 @@
      burger.classList.toggle("menu-button--close");
     });
 })();
-
