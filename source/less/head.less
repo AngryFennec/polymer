@@ -18,6 +18,9 @@
   font-size: 35px;
   text-transform: uppercase;
   color: #000000;
+  .tablet(@rules: {
+    margin-bottom: 0;
+  });
 
   .mobile(@rules: {
     line-height: 21px;
@@ -33,6 +36,10 @@
   .tablet(@rules: {
     margin: 0 auto;
     width: 768px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 150px;
+    margin-bottom: 0;
   });
   .mobile(@rules: {
     margin: 0 auto;
@@ -46,10 +53,14 @@
   margin-bottom: 60px;
   margin: 0 auto;
   width: 1920px;
+  z-index: 10;
+  position: relative;
   .flex-block();
 
   .tablet(@rules: {
     width: 768px;
+    z-index: 10;
+    position: relative;
     margin-bottom: 0;
     margin-top: 0;
     .flex-block();
@@ -58,6 +69,7 @@
 
   .mobile(@rules: {
     z-index: 10;
+    position: relative;
     width: 320px;
     margin-bottom: 0;
     margin-top: 0;
@@ -87,7 +99,9 @@ color: #000000;
 
   .tablet(@rules: {
     width: 768px;
-    padding-top: 35px;
+
+    line-height: 35px;
+    font-size: 20px;
     border: none;
   });
 
@@ -115,6 +129,7 @@ color: #000000;
   .tablet(@rules: {
     .flex-block();
     .flex-direction(column);
+    margin-top: 20px;
 
   });
   .flex-block();
@@ -140,6 +155,7 @@ color: #000000;
     });
     .tablet(@rules: {
       margin-bottom: 20px;
+      width: 350px;
     });
     margin-bottom: 30px;
     padding-left: 20px;
