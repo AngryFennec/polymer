@@ -10,9 +10,18 @@
   font-family: @second-font;
   font-size: 13px;
   line-height: 21px;
+
+  &--2,
+  &--3,
+  &--4,
+  &--5,
+  &--6 {
+    display: none;
+  }
+}
+
+.review__rating-wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -69,10 +78,34 @@
   position: absolute;
 }
 
-.review__form {
+.review__form-wrapper {
+  width: 300px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
+
+.review__form-submit {
+  margin: 20px auto;
+}
+
+.review__form-input {
+  padding: 10px;
+  text-align: center;
+}
+
+.review__form-rating-block {
+  margin: 20px auto;
+
+  & svg {
+    fill: #000;
+  }
+}
+
+.review__form {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .review__block {
     width: 280px;
@@ -111,6 +144,10 @@
     &--right {
       right: 150px;
     }
+  }
+
+  .review__form-wrapper {
+    width: 600px;
   }
 }
 
@@ -161,4 +198,16 @@
     background: url("../images/examples-back1.svg") no-repeat 0 -660px;
     z-index: -1;
   }
+
+  .review__block--2 {
+
+      display: block;
+
+  }
+
+  .review__block--3 {
+
+    display: block;
+
+}
 }
