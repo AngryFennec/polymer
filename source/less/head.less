@@ -2,15 +2,39 @@
   min-height: 1050px;
   .tablet(@rules: {
     min-height: 700px;
-
   });
   .mobile(@rules: {
     min-height: 450px;
         z-index: 6;
+  });
+}
 
+.head__back {
+  width: 1920px;
+  margin: 0 auto;
+  .tablet(@rules: {
+    width: 768px;
+    margin: 0 auto;
+    background:
+    url("../images/head-tablet.png") 35px 430px no-repeat,
+    url("../images/head-tablet-pseudo7.png") 580px 147px no-repeat,
+    url("../images/head-tablet-pseudo1.png") 300px 225px no-repeat,
+    url("../images/head-tablet-pseudo9.png") 0px 665px no-repeat,
+    url("../images/head-tablet-pseudo2.png") 235px 735px no-repeat,
+    url("../images/head-tablet-pseudo3.png") -50px 730px no-repeat,
+    url("../images/head-tablet-pseudo4.png") 0px 785px no-repeat,
+    url("../images/head-tablet-pseudo5.png") 30px 550px no-repeat,
+    url("../images/head-tablet-pseudo8.png") 380px 50px no-repeat,
+    url("../images/head-tablet-pseudo8.png") 250px 50px no-repeat
+    ;
+  });
+  .mobile(@rules: {
+width: 320px;
+margin: 0 auto;
   });
 
 }
+
 
 .head__header {
   font-family: @main-font-bold;
@@ -72,7 +96,7 @@
     margin-top: 0;
     .flex-block();
     .flex-direction(column);
-    background: url("../images/head-tablet.png") 35px 240px no-repeat;
+
   });
 
   .mobile(@rules: {
@@ -110,7 +134,7 @@
 
   .tablet(@rules: {
     width: 768px;
-
+    min-height: 935px;
     line-height: 35px;
     font-size: 20px;
     border: none;
