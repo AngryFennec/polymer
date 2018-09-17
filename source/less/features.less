@@ -4,8 +4,11 @@
     min-height: 800px;
   });
   .mobile(@rules: {
+    margin-top: -75px;
     min-height: 650px;
+        z-index: 5;
   });
+
 }
 
 
@@ -13,14 +16,17 @@
   padding-top: 215px;
   margin: 0 auto;
   width: 1920px;
-  background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%);
-  .flex-block();
+    .flex-block();
+  background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%),
+     url("/images/features-desk.png") 250px 200px no-repeat;
 
   .tablet(@rules: {
     width: 768px;
     padding-top: 0;
     margin-bottom: 0;
     margin-top: 0;
+      background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%),
+      url("/images/features-mobile.png") 0px 200px no-repeat;
   });
 
   .mobile(@rules: {
@@ -28,6 +34,8 @@
     margin-bottom: 0;
     margin-top: 0;
     padding-top: 0;
+    background: linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%),
+    url("/images/features-tablet.png") 0px 140px no-repeat;
   });
 
   .aside {
