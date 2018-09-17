@@ -4,6 +4,8 @@
   padding: 25px;
   padding-top: 2px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .review__block {
@@ -58,7 +60,7 @@
   position: absolute;
   background: transparent;
   border: none;
-  top: 50%;
+  top: 125px;
   &--left {
     left: -7px;
     transform: rotate(90deg);
@@ -71,7 +73,9 @@
 }
 
 .review__open-form-button {
-  display: none;
+  margin: 0 auto;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }
 
 .review__back {
@@ -79,7 +83,7 @@
 }
 
 .review__form-wrapper {
-  width: 300px;
+  width: 270px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -106,10 +110,14 @@
   display: none;
 }
 
+.review__form-textarea {
+  padding: 10px;
+}
+
 @media (min-width: 768px) {
   .review__block {
     width: 280px;
-    margin: 8px auto;
+    margin: 23px auto 8px auto;
   }
 
 
@@ -120,7 +128,7 @@
   .review {
     width: 768px;
     padding: 20px;
-    padding-top: 42px;
+    padding-top: 14px;
     background: url("../images/review-back.svg") no-repeat 99.5% 105px,
       url("../images/work-back1.svg") no-repeat 100% -171px;
 
@@ -136,7 +144,7 @@
   }
 
   .review__button {
-    top: 63%;
+    top: 175px;
     &--left {
       left: 150px;
     }
@@ -180,13 +188,6 @@
     &--right {
       right: 0px;
     }
-  }
-
-  .review__open-form-button {
-    display: block;
-    margin: 0 auto;
-    margin-top: 16px;
-    margin-bottom: 20px;
   }
 
   .review__back {
