@@ -33,7 +33,7 @@
   color: @placeholder;
   }
   &:hover {
-  background-color: @placeholder;
+  background-color: @light-gray;
   font-family: @main-font-semi;
 
   a{
@@ -72,10 +72,12 @@
   &::after {
     position: absolute;
     content:"";
-    background-image: url(/images/phone-pseudo.png);
+    background-image: url(../images/phone-pseudo.png);
     background-repeat: no-repeat;
-    top: 5px;
-    left: 0;
+    top: -2px;
+    right: 90px;
+    width: 28px;
+    height: 25px;
   }
 
 }
@@ -110,6 +112,17 @@
     padding-top: 0;
     margin-top: 0;
     width: 150px;
+
+    &::after {
+      position: absolute;
+      content:"";
+      background-image: url(../images/phone-pseudo.png);
+      background-repeat: no-repeat;
+      top: -2px;
+      right: -50px;
+      width: 28px;
+      height: 25px;
+    }
   }
 }
 
@@ -146,5 +159,16 @@
     margin-top: 0;
     width: 150px;
     margin-left: 200px;
+
+    &::after {
+      position: absolute;
+      content:"";
+      background-image: url(../images/phone-pseudo.png);
+      background-repeat: no-repeat;
+      top: 25px;
+      right: -50px;
+      width: 28px;
+      height: 25px;
+    }
   }
 }

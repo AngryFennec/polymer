@@ -62,7 +62,7 @@
   z-index: 6;
   position: relative;
   .flex-block();
-  background: url("/images/head-desktop.png") 640px 80px no-repeat;
+  background: url("../images/head-desktop.png") 640px 80px no-repeat;
 
   .tablet(@rules: {
     width: 768px;
@@ -72,7 +72,7 @@
     margin-top: 0;
     .flex-block();
     .flex-direction(column);
-    background: url("/images/head-tablet.png") 35px 240px no-repeat;
+    background: url("../images/head-tablet.png") 35px 240px no-repeat;
   });
 
   .mobile(@rules: {
@@ -84,10 +84,10 @@
     margin-top: 0;
     .flex-block();
     .flex-direction(column);
-    background: url("/images/head-mobile.png") 40px 180px no-repeat,
-    url("/images/head-mobile-pseudo3.png") 0px 140px no-repeat,
-    url("/images/head-mobile-pseudo1.png") 50px 275px no-repeat,
-    url("/images/head-mobile-pseudo2.png") 00px 290px no-repeat;
+    background: url("../images/head-mobile.png") 40px 180px no-repeat,
+    url("../images/head-mobile-pseudo3.png") 0px 140px no-repeat,
+    url("../images/head-mobile-pseudo1.png") 50px 275px no-repeat,
+    url("../images/head-mobile-pseudo2.png") 00px 290px no-repeat;
   });
 
   .aside {
@@ -128,7 +128,14 @@
 .head__advantage {
   margin-bottom: 0;
   margin-top: 0;
-  margin-left: -65px;
+  margin-left: 0px;
+  .tablet(@rules: {
+    margin-left: -65px;
+  });
+
+  .mobile(@rules: {
+    margin-left: -65px;
+  });
 }
 
 .head__form {
