@@ -6,7 +6,7 @@
   });
   .mobile(@rules: {
     min-height: 450px;
-        z-index: 10;
+        z-index: 6;
 
   });
 
@@ -22,11 +22,15 @@
   margin-left: 120px;
   .tablet(@rules: {
     margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 20px;
   });
 
   .mobile(@rules: {
     line-height: 21px;
     font-size: 15px;
+    margin-left: 0;
+    margin-top: 10px;
     padding-right: 20px;
     margin-bottom: 0px;
   });
@@ -41,13 +45,13 @@
     padding-top: 15px;
     padding-left: 20px;
     padding-right: 150px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   });
   .mobile(@rules: {
     margin: 0 auto;
     padding-left: 20px;
     width: 320px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   });
 }
 .head__inner {
@@ -55,14 +59,14 @@
   margin-bottom: 60px;
   margin: 0 auto;
   width: 1920px;
-  z-index: 10;
+  z-index: 6;
   position: relative;
   .flex-block();
   background: url("/images/head-desktop.png") 640px 80px no-repeat;
 
   .tablet(@rules: {
     width: 768px;
-    z-index: 10;
+    z-index: 6;
     position: relative;
     margin-bottom: 0;
     margin-top: 0;
@@ -72,17 +76,18 @@
   });
 
   .mobile(@rules: {
-    z-index: 10;
+    margin: 0 auto;
+    z-index: 6;
     position: relative;
     width: 320px;
     margin-bottom: 0;
     margin-top: 0;
     .flex-block();
     .flex-direction(column);
-    background: url("/images/head-mobile.png") 40px 200px no-repeat,
-    url("/images/head-mobile-pseudo3.png") 0px 160px no-repeat,
-    url("/images/head-mobile-pseudo1.png") 50px 295px no-repeat,
-    url("/images/head-mobile-pseudo2.png") 00px 310px no-repeat;
+    background: url("/images/head-mobile.png") 40px 180px no-repeat,
+    url("/images/head-mobile-pseudo3.png") 0px 140px no-repeat,
+    url("/images/head-mobile-pseudo1.png") 50px 275px no-repeat,
+    url("/images/head-mobile-pseudo2.png") 00px 290px no-repeat;
   });
 
   .aside {
@@ -123,6 +128,7 @@
 .head__advantage {
   margin-bottom: 0;
   margin-top: 0;
+  margin-left: -65px;
 }
 
 .head__form {
@@ -131,11 +137,13 @@
     .flex-direction(column);
     margin: 0 auto;
     margin-top: 15px;
+    margin-left: -60px;
   });
   .tablet(@rules: {
     .flex-block();
     .flex-direction(column);
     margin-top: 20px;
+    margin-left: -62px;
 
   });
   .flex-block();
@@ -177,7 +185,14 @@
 
 .head__button {
   margin-top: -15px;
+  .tablet(@rules: {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 35px;
+    height: 42px;
+    });
   .mobile(@rules: {
+    margin-top: 0;
     margin-left: 0;
     width: 170px;
     font-size: 15px;
