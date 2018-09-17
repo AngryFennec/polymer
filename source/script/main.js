@@ -106,17 +106,26 @@
         $(slides[currentSlide]).next().next().fadeIn();
       }
     });
-  
-  var burger = document.querySelector(".menu-button");
-  var menu = document.querySelector(".nav-container");
 
-  menu.classList.add("nav-container--close");
-  burger.classList.add("menu-button--close");
+    // звездочки
+    var svg = $(".review__label svg");
+    svg.on("click", function() {
+      $(svg).css("fill", "#C4C4C4");
+      for (var i = 0; i <= $(this).attr("data-number"); i++)
+      $(svg[i]).css("fill", "#0047FF");
+    });
 
-  burger.addEventListener ("click", function (evt) {
-    evt.preventDefault();
-    menu.classList.toggle("nav-container--close");
-    burger.classList.toggle("menu-button--close");
-  });
+
+ var burger = document.querySelector(".menu-button");
+   var menu = document.querySelector(".nav-container");
+
+    menu.classList.add("nav-container--close");
+     burger.classList.add("menu-button--close");
+
+     burger.addEventListener ("click", function (evt) {
+     evt.preventDefault();
+     menu.classList.toggle("nav-container--close");
+     burger.classList.toggle("menu-button--close");
+    });
 })();
 
