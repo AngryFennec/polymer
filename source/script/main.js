@@ -115,6 +115,34 @@
       $(svg[i]).css("fill", "#0047FF");
     });
 
+    var button=document.querySelectorAll(".callback");
+    var modal=document.querySelector(".feadback");
+    var closeButton=modal.querySelector(".feadback__close-button");
+
+    var isValid = function(sample) {
+      var regexp = /\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}/;
+      return regexp.test(sample);
+    };
+
+    var show = function(e,element) {
+      e.preventDefault();
+      element.classList.remove("visually-hidden");
+    }
+
+    var hidden = function(e,element) {
+      e.preventDefault();
+      element.classList.add("visually-hidden");
+    }
+
+    for (var i = 0; i <= (button.length-1); i++) {
+      button[i].addEventListener ("click", function (evt) {
+        show(evt, modal);
+      });
+    }
+
+    closeButton.addEventListener ("click", function (evt) {
+      hidden(evt, modal);
+    });
 
  var burger = document.querySelector(".menu-button");
    var menu = document.querySelector(".nav-container");
