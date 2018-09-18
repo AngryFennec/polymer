@@ -19,17 +19,17 @@ margin-top: -90px;
   margin: 0 auto;
   width: 1920px;
   .flex-block();
-  background-image: url("../images/work-desk.jpg");
-  background-repeat: no-repeat;
-  background-position: 830px 220px;
+  background: url("../images/work-desk.jpg") no-repeat 830px 220px,
+  url("../images/klass_avto.svg") 5px -290px no-repeat;
+
   z-index: 5;
 
   .tablet(@rules: {
     width: 768px;
     margin-bottom: 0;
     margin-top: -5px;
-    background-image: url("../images/work-tablet.jpg");
-    background-position: 100px 430px;
+    background: url("../images/work-tablet.jpg") no-repeat 100px 430px,
+    url("../images/klass-avto-tabletka.svg") 10px -122px no-repeat;
   });
 
   .mobile(@rules: {
