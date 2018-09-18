@@ -1,0 +1,131 @@
+.feadback,
+.feadback-name {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.feadback__window {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateX(50%) translateY(-50%);
+  width: 300px;
+  background-color: white;
+}
+
+.feadback__form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.feadback__button {
+  margin-left: 20px;
+  margin-bottom: 19px;
+}
+
+.feadback-name .feadback__legend {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.feadback__legend {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
+.feadback__name {
+  width: 280px;
+  min-height: 40px;
+  border-color: 1px solid #3D2E29;
+  padding: 0 10px;
+  margin-bottom: 13px;
+}
+
+.feadback__phone {
+  width: 248px;
+  min-height: 40px;
+  border-color: 1px solid #3D2E29;
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 19px;
+}
+
+.feadback__label {
+  margin-bottom: 9px;
+
+  &--big {
+    font-size: 16px;
+  }
+}
+
+.feadback__close-button,
+.feadback__close-button-name {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url("../images/dagger-button.png") no-repeat 0 0;
+  background-color: transparent;
+  border: none;
+  top: 5px;
+  right: 5px;
+}
+
+.feadback__price {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 10px;
+}
+
+@media (min-width: 768px) {
+  .feadback__form {
+    padding: 0 20px;
+    font-size: 18px;
+  }
+  .feadback__window {
+    width: 405px;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+  }
+
+  .feadback-name .feadback__legend {
+    padding-left: 20px;
+  }
+
+  .feadback__legend {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 7px;
+  }
+
+  .feadback__close-button,
+  .feadback__close-button-name {
+    top: 15px;
+    right: 15px;
+  }
+
+  .feadback__label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .feadback__name {
+    width: 365px;
+    margin-bottom: 18px;
+  }
+
+  .feadback__button {
+    margin-left: 62px;
+  }
+
+  .feadback__price {
+    margin: 10px 20px;
+  }
+}
