@@ -4,6 +4,10 @@
   margin: 0 auto;
   min-height: 1063px;
   margin-top: -330px;
+  .laptop(@rules: {
+    width: 1200px;
+    margin: 0 auto;
+});
   .tablet(@rules: {
     width: 768px;
   margin: 0 auto;
@@ -31,6 +35,16 @@
   background: url("../images/features.svg") -147px 200px no-repeat,
   linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%),
   url("../images/features-desk.png") 260px 200px no-repeat;
+  .laptop(@rules: {
+    width: 1200px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background: url("../images/features.svg") -147px 200px no-repeat,
+    linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%),
+    url("../images/features-desk.png") -200px 200px no-repeat;
+});
 
   .tablet(@rules: {
     top: 0;
