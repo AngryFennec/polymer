@@ -1,19 +1,28 @@
 .claim {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+
   .mobile(@rules: {
+    width: 320px;
     min-height: 287px;
+    margin: 0 auto;
+    background-color: @dark-blue;
   });
   .tablet(@rules: {
+    width: 768px;
     min-height: 330px;
+    background-color: @dark-blue;
   });
-  background-color: @dark-blue;
-  width: auto;
+
   min-height: 279px;
 }
 
 .claim__inner {
   .mobile(@rules: {
-    width: 320px;
-    margin: 0 auto;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 33px;
     padding-left: 20px;
@@ -24,8 +33,9 @@
     background-position: 0 15px;
   });
   .tablet(@rules: {
-    width: 768px;
-    margin: 0 auto;
+    background-color: @dark-blue;
+    top: 0;
+    left: 0;
     min-height: 330px;
     padding-top: 6px;
     padding-bottom: 40px;
@@ -36,14 +46,16 @@
                 url("/images/claim-pseudo3.png") 68px 305px;
     background-repeat: no-repeat;
   });
-
+  position: absolute;
+  top: 0;
+  left: -360px;
   width: 1920px;
-  margin: 0 auto;
   padding-top: 27px;
   padding-left: 370px;
   padding-bottom: 90px;
   z-index: 5;
   background: url("../images/forma.svg") 10px -290px no-repeat;
+  background-color: @dark-blue;
 }
 
 .claim__header {
