@@ -1,6 +1,6 @@
 .work {
 
-  min-height: 970px;
+  min-height: 979px;
   .tablet(@rules: {
 margin-top: -90px;
     min-height: 995px;
@@ -17,10 +17,12 @@ margin-top: -90px;
   margin-top: 68px;
   margin-bottom: 60px;
   margin: 0 auto;
+  min-height: 979px;
   width: 1920px;
   .flex-block();
-  background: url("../images/work-desk.jpg") no-repeat 830px 220px,
-  url("../images/klass_avto.svg") 5px -290px no-repeat;
+  background:
+  url("../images/klass_avto.svg") 5px -285px no-repeat,
+  url("../images/work-desk.jpg") no-repeat 830px 220px;
 
   z-index: 5;
 
@@ -29,13 +31,14 @@ margin-top: -90px;
     margin-bottom: 0;
     margin-top: -5px;
     background: url("../images/work-tablet.jpg") no-repeat 100px 430px,
-    url("../images/klass-avto-tabletka.svg") 10px -122px no-repeat;
+    url("../images/klass_avto_tabletka.svg") 0px -137px no-repeat;
   });
 
   .mobile(@rules: {
     width: 320px;
     margin-bottom: 0;
     margin-top: 0;
+    min-height: 550px;
     background: url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat,
     url("../images/work-mobile.jpg") 0px 70px no-repeat;
   });
@@ -111,8 +114,6 @@ margin-top: -90px;
   color: @black;
   margin-right: 53px;
   white-space: pre-wrap;
-
-
 
   &--active {
     a {
