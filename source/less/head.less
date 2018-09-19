@@ -9,15 +9,33 @@ min-height: 1040px;
   });
 }
 
+.head__inner {
+  .mobile(@rules: {
+    display: none;
+   });
+   .tablet(@rules: {
+     display: none;
+    });
+    width: 1920px;
+    position: absolute;
+    z-index: -5;
+    top: -117px;
+    left: -360px;
+    height: 100%;
+    background: url("../images/head-desktop.png") 640px 200px no-repeat,
+    url("../images/border.svg") 400px 100px no-repeat,
+    url("../images/kheder.svg") 10px -122px no-repeat;
+
+    aside {
+      margin-top: 117px;
+    }
+}
 .head__back {
   z-index: 8;
   min-height: 1040px;
   position: relative;
-  width: 1920px;
-  margin: 0 auto;
-  background: url("../images/head-desktop.png") 640px 200px no-repeat,
-  url("../images/border.svg") 400px 100px no-repeat,
-  url("../images/kheder.svg") 10px -122px no-repeat;
+
+
   /*
   background: url("../images/head-desktop.png") 640px 200px no-repeat,
   url("../images/head-desk-pseudo1.png") 1167px 100px no-repeat,
@@ -56,7 +74,6 @@ min-height: 450px;
 margin: 0 auto;
 background: none;
   });
-
 }
 
 
@@ -68,6 +85,8 @@ background: none;
   color: #000000;
   margin-top: 42px;
   margin-left: 120px;
+  position: relative;
+  z-index: 100;
   .tablet(@rules: {
     margin-bottom: 0;
     margin-left: 0;
@@ -86,7 +105,9 @@ background: none;
 
 .head__header-container {
   margin: 0 auto;
-  width: 1920px;
+  min-width: 1200px;
+  width: 100%;
+  max-width: 1920px;
   .tablet(@rules: {
     margin: 0 auto;
     width: 768px;
@@ -102,11 +123,12 @@ background: none;
     margin-bottom: 30px;
   });
 }
-.head__inner {
+.head__wrapper {
   margin-top: 68px;
   margin-bottom: 60px;
   margin: 0 auto;
-  width: 1920px;
+  width: 1200px;
+  min-height: 900px;
   z-index: 6;
   position: relative;
   .flex-block();

@@ -10,7 +10,7 @@
   min-height: 279px;
 }
 
-.claim__inner {
+.claim__wrapper {
   .mobile(@rules: {
     width: 320px;
     margin: 0 auto;
@@ -37,12 +37,27 @@
     background-repeat: no-repeat;
   });
 
-  width: 1920px;
+  width: 1200px;
   margin: 0 auto;
   padding-top: 27px;
-  padding-left: 370px;
+  padding-left: 10px;
   padding-bottom: 90px;
   z-index: 5;
+  position: relative;
+}
+
+.claim__inner {
+  .mobile(@rules: {
+   background: none;
+  });
+  .tablet(@rules: {
+    background: none;
+   });
+  position: absolute;
+  width: 1920px;
+  height: 100%;
+  top: 0;
+  left: -360px;
   background: url("../images/forma.svg") 10px -290px no-repeat;
 }
 
@@ -66,6 +81,8 @@
   line-height: 31px;
   color: @white;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
 }
 
 .claim__header-capital {
