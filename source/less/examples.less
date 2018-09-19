@@ -1,12 +1,21 @@
 .examples {
   width: 320px;
   margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.examples__box {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  position: relative;
+  padding-top: 0;
 }
-
+.examples__box--2 {
+  display: none;
+}
 .examples__back {
   position: absolute;
 }
@@ -53,6 +62,10 @@
   width: 280px;
   height: 180px;
 
+  &--0 {
+    margin-top: 0;
+    background: url("../images/video-img.jpg") no-repeat 0 0;
+  }
   &--1 {
     background: url("../images/work1-mobile.jpg") no-repeat 0 0;
   }
@@ -62,7 +75,7 @@
   }
 
   &--3,
-  &--4 {
+  &--4, {
     display: none;
   }
 }
@@ -71,6 +84,7 @@
   align-self: center;
   background: transparent;
   border: none;
+  margin: 0 auto;
   margin-top: 15px;
 
   & span {
@@ -102,15 +116,34 @@
   z-index: 20;
 }
 
+.open {
+  display: flex;
+}
+
+.open-btn {
+  & img {
+    transform: rotate(-180deg);
+  }
+}
 @media (min-width: 768px) {
   .examples {
     width: 768px;
+
+  }
+  .examples__back {
+    width: 100%;
+    height: 1180px;
+    background: url("../images/work-back1.svg") no-repeat 100% 1009px;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+  }
+
+  .examples__box {
     padding-bottom: 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: url("../images/work-back1.svg") no-repeat 100% 115.9%;
-
   }
 
   .examples__header {
@@ -136,6 +169,18 @@
     display: block;
     margin-top: 30px;
 
+    &--0 {
+      width: 730px;
+      height: 430px;
+      background: url("../images/video-img-tab.jpg") no-repeat 0 0;
+
+      .examples__description {
+        font-size: 25px;
+        padding-bottom: 33px;
+        padding-left: 20px;
+        padding-top: 22px;
+      }
+    }
     &--1 {
       background: url("../images/work1-tablet.jpg") no-repeat 0 0;
       width: 445px;
@@ -189,12 +234,14 @@
 
 @media (min-width: 1200px) {
   .examples {
+    width: 1200px;
     background: transparent;
+  }
+  .examples__box {
     padding: 0 ;
     padding-left: 20px;
-    width: 1200px;
-
   }
+
   .examples__header {
     width: 100%;
     margin-top: 60px;
@@ -214,6 +261,14 @@
 
   .examples__block {
     margin-top: 20px;
+
+    &--0 {
+      width: 680px;
+      height: 430px;
+      order: 0;
+      margin-left: 18px;
+      background: url("../images/video-img-desktop.jpg") no-repeat 0 0;
+    }
     &--1 {
       margin-top: 30px;
       order: -1;
@@ -246,13 +301,15 @@
     }
   }
 
+  .examples__box--2 .examples__block--1 {
+    margin-top: 20px;
+  }
   .examples__description {
     background-color: transparent;
     padding-bottom: 15px;
     padding-left: 10px;
     font-size: 20px;
     line-height: 24px;
-
   }
 
   .examples__button {
@@ -279,10 +336,10 @@
 
   .examples__back {
     width: 1920px;
-    height: 100%;
+    height: 1061px;
     background: url("../images/examples-back1.svg") no-repeat 0 401px;
     z-index: -1;
-    top: 0;
+    bottom: 0;
     left: -360px;
   }
 }
