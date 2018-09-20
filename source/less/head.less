@@ -1,5 +1,5 @@
 .head {
-margin-top: -109px;
+margin-top: -90px;
 min-height: 1040px;
   .tablet(@rules: {
     margin-top: 0;
@@ -19,7 +19,7 @@ min-height: 1040px;
    .tablet(@rules: {
      display: none;
     });
-    width: 1920px;
+    width: 768px;
     position: absolute;
     z-index: -5;
     top: -246px;
@@ -29,8 +29,8 @@ min-height: 1040px;
     url("../images/border.svg") 400px 220px no-repeat,
     url("../images/kheder.svg") 10px 0 no-repeat;
 
-    aside {
-      margin-top: 117px;
+    .aside {
+      margin-top: 155px;
     }
 }
 .head__back {
@@ -93,6 +93,11 @@ background: none;
   margin-left: 120px;
   position: relative;
   z-index: 100;
+  .laptop(@rules: {
+    margin-left: 20px;;
+
+  });
+
   .tablet(@rules: {
     width: 660px;
     margin-bottom: 0;
@@ -113,9 +118,12 @@ background: none;
 
 .head__header-container {
   margin: 0 auto;
-  min-width: 1200px;
-  width: 100%;
-  max-width: 1920px;
+width: 1920px;
+.laptop(@rules: {
+width: 1200px;
+});
+
+
   .tablet(@rules: {
     margin: 0 auto;
     width: 768px;
@@ -177,10 +185,10 @@ background: none;
 .head__content {
   margin-top: 0;
   width: 1270px;
-  padding-top: 30px;
+  padding-top: 35px;
   min-height: 702px;
   //border: 0.5px solid @blue;
-  padding-left: 37px;
+  padding-left: 10px;
   margin-left: 45px;
   font-family: @main-font;
   margin-top: -22px;
@@ -210,11 +218,11 @@ background: none;
   margin-top: 0;
   margin-left: 0px;
   .tablet(@rules: {
-    margin-left: -65px;
+    margin-left: -35px;
   });
 
   .mobile(@rules: {
-    margin-left: -65px;
+    margin-left: -35px;
   });
 }
 
@@ -223,14 +231,14 @@ background: none;
     .flex-block();
     .flex-direction(column);
     margin: 0 auto;
-    margin-top: 15px;
-    margin-left: -60px;
+    margin-top: 17px;
+    margin-left: -35px;
   });
   .tablet(@rules: {
     .flex-block();
     .flex-direction(column);
     margin-top: 20px;
-    margin-left: -62px;
+    margin-left: -35px;
 
   });
   .flex-block();
