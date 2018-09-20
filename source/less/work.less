@@ -12,17 +12,40 @@ margin-top: -90px;
   });
 
 }
-
 .work__inner {
+  .mobile(@rules: {
+    display: none;
+   });
+   .tablet(@rules: {
+     display: none;
+    });
+    width: 1920px;
+    position: absolute;
+    top: 0;
+    left: -360px;
+    height: 100%;
+    background:
+    url("../images/work-desktop.png") no-repeat 830px 220px,
+    url("../images/klass_avto.svg") 5px -267px no-repeat;
+}
+
+.work__aside {
+  @media (min-width: 1200px) {
+    display: none;
+  }
+  @media (min-width: 1920px) {
+    display: block;
+  }
+}
+.work__wrapper {
+  position: relative;
   margin-top: 68px;
   margin-bottom: 60px;
   margin: 0 auto;
   min-height: 995px;
-  width: 1920px;
+  width: 1200px;
   .flex-block();
-  background:
-  url("../images/work-desktop.png") no-repeat 830px 220px,
-  url("../images/klass_avto.svg") 5px -285px no-repeat;
+
 
 
   z-index: 5;
@@ -30,9 +53,9 @@ margin-top: -90px;
   .tablet(@rules: {
     width: 768px;
     margin-bottom: 0;
-    margin-top: -5px;
+
     background: url("../images/work-tablet.png") no-repeat 100px 430px,
-    url("../images/klass_avto_tabletka.svg") 0px -137px no-repeat;
+    url("../images/klass_avto_tabletka.svg") -3px -121px no-repeat;
   });
 
   .mobile(@rules: {
