@@ -16,23 +16,21 @@
 
   // установки по умолчанию
   var slides = document.querySelectorAll(".review__block");
-  var currentWidth = window.innerWidth;
+  var currentWidth = document.body.clientWidth;
   var currentSlide = 0;
   $('.review__button--left').prop('disabled',true);
 
   // реагирование слайдера на ресайз окна
   window.addEventListener("resize", function () {
-    currentWidth = window.innerWidth;
+    currentWidth = document.body.clientWidth;
 
     // если десктоп, то сбрасываем слайдер и показываем по 3
-    if (window.innerWidth > 1200) {
+    if (document.body.clientWidth > 1200) {
       setTimeout( function (){
         $(slides).hide();
         currentSlide = 0;
         $('.review__button--right').prop('disabled',false);
-        $(slides[currentSlide]).show();
-        $(slides[currentSlide]).next().show();
-        $(slides[currentSlide]).next().next().show();
+        $(slides[currentSlide]).show().next().show().next().show();
       }, 200)
     }
     // если меньше десктопа, то сбрасываем слайдер и показываем по 1
@@ -62,18 +60,14 @@
       }
       // поведение шире десктопа
       else {
-        $(slides[currentSlide]).hide();
-        $(slides[currentSlide]).next().hide();
-        $(slides[currentSlide]).next().next().hide();
+        $(slides[currentSlide]).hide().next().hide().next().hide();
         currentSlide ++;
           if (currentSlide > slides.length-4) {
           $('.review__button--right').prop('disabled',true);
         } else {
           $('.review__button--right').prop('disabled',false);
         };
-        $(slides[currentSlide]).fadeIn();
-        $(slides[currentSlide]).next().fadeIn();
-        $(slides[currentSlide]).next().next().fadeIn();
+        $(slides[currentSlide]).fadeIn().next().fadeIn().next().fadeIn()
       }
     });
     //листание влево
@@ -92,18 +86,14 @@
         }
         // поведение при ширине больше десктопа
       else {
-        $(slides[currentSlide]).hide();
-        $(slides[currentSlide]).next().hide();
-        $(slides[currentSlide]).next().next().hide();
+        $(slides[currentSlide]).hide().next().hide().next().hide();
           currentSlide --;
         if (currentSlide < 1) {
           $('.review__button--left').prop('disabled',true);
         } else {
           $('.review__button--left').prop('disabled',false);
         };
-        $(slides[currentSlide]).fadeIn();
-        $(slides[currentSlide]).next().fadeIn();
-        $(slides[currentSlide]).next().next().fadeIn();
+        $(slides[currentSlide]).fadeIn().next().fadeIn().next().fadeIn();
       }
     });
 
@@ -157,11 +147,6 @@
      menu.classList.toggle("nav-container--close");
      over.classList.toggle("overlay--close");
      burger.classList.toggle("menu-button--close");
-    });
-    menu.addEventListener ("click", function (evt) {
-       menu.classList.toggle("nav-container--close");
-      over.classList.toggle("overlay--close");
-      burger.classList.toggle("menu-button--close");
     });
 
     var examplesButton = document.querySelector(".examples__button");
