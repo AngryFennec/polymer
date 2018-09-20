@@ -3,6 +3,12 @@
   border: none;
 }
 
+.menu__nav {
+  display: none;
+}
+
+
+
 .menu {
   .no-list();
   .flex-block();
@@ -96,22 +102,22 @@
 
 @media (min-width: 768px) {
 
-  .menu__outer {
+  .menu__nav {
         background-color: transparent;
     display: flex;
-    position: absolute;
+    position: relative;
     flex-direction: row;
     justify-content: flex-start;
     min-width: 450px;
-    margin-left: 100px;
-    top: 10px;
-    right: -487px;
+    margin-left: 0px;
     z-index: 1;
+    margin-top: 27px;
+    padding-left: 20px;
   }
 
-  .menu__outer-btn {
-    margin-left: 42px;
-    margin-top: -5px;
+  .menu__nav-btn {
+    margin-left: 35px;
+    margin-top: -7px;
     width: 170px;
     z-index: 1;
   }
@@ -119,7 +125,19 @@
     width: 300px;
   }
 
-  .menu__outer-link {
+
+
+  .menu__nav-link {
+    font-family: @main-font-semi;
+    color: #606060;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    margin-left: 69px;
+    position: relative;
+    margin-left: 15px;
+    display: block;
+    position: relative;
     padding-top: 0;
     margin-top: 0;
     width: 190px;
@@ -141,7 +159,7 @@
 }
 
 @media (min-width: 1200px) {
-  .menu__outer {
+  .menu__nav {
     background-color: transparent;
     z-index: 1;
     display: flex;
@@ -156,7 +174,7 @@
     margin-left: 20px;
   }
 
-  .menu__outer-btn {
+  .menu__nav-btn {
     padding-left: 0;
     padding-right: 0;
     margin-left: 40px;
@@ -170,7 +188,7 @@
     margin-right: 0;
   }
 
-  .menu__outer-link {
+  .menu__nav-link {
     padding-top: 28px;
     margin-top: 0;
     width: 190px;
@@ -198,7 +216,7 @@
     display: none;
   }
 
-  .menu__outer {
+  .menu__nav {
     display: flex;
     position: absolute;
     flex-direction: row;
@@ -208,7 +226,7 @@
     right: -20px;
   }
 
-  .menu__outer-btn {
+  .menu__nav-btn {
     padding-left: 0;
     padding-right: 0;
     margin-left: 40px;
@@ -221,7 +239,7 @@
     padding-top: 7px;
   }
 
-  .menu__outer-link {
+  .menu__nav-link {
     padding-top: 28px;
     margin-top: 0;
     width: 190px;
