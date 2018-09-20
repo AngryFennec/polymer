@@ -158,6 +158,11 @@
      over.classList.toggle("overlay--close");
      burger.classList.toggle("menu-button--close");
     });
+    menu.addEventListener ("click", function (evt) {
+       menu.classList.toggle("nav-container--close");
+      over.classList.toggle("overlay--close");
+      burger.classList.toggle("menu-button--close");
+    });
 
     var examplesButton = document.querySelector(".examples__button");
     var examplesBox = document.querySelector(".examples__box--2");
