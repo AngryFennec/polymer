@@ -19,7 +19,7 @@
   .flex-direction(@direction: column);
   .justify-content(flex-start);
   position: absolute;
-  background-color: transparent;
+  background-color: white;
   z-index: 10;
 
 
@@ -31,6 +31,7 @@
 .header {
   min-height: 50px;
   padding-top: 20px;
+    z-index: 50;
 }
 .header__logo {
   padding-left: 90px;
@@ -43,12 +44,16 @@
   position: relative;
   width: 768px;
   margin-bottom: -10px;
+  z-index: 10;
 }
 .nav-container {
   box-shadow: none;
   position: relative;
   width: 300px;
+  background-color: white;
   margin-left: 0;
+  z-index: 10;
+
 
   &--close .menu__outer{
     display: flex;
@@ -59,6 +64,7 @@
 .header {
   width: 768px;
   padding-top: 25px;
+  z-index: 150;
 }
 .header__logo {
   padding-left: 80px;
@@ -90,6 +96,7 @@
 .header {
   width: 768px;
   padding-top: 25px;
+    z-index: 150;
 }
 .header__logo {
   padding-left: 80px;
