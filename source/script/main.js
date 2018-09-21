@@ -136,16 +136,17 @@
 
  var burger = document.querySelector(".menu-button");
    var menu = document.querySelector(".nav-container");
-   var over = document.querySelector(".overlay");
+   var over = Array.prototype.slice.call(document.querySelectorAll(".overlay"));
 
     menu.classList.add("nav-container--close");
      burger.classList.add("menu-button--close");
-     over.classList.add("overlay--close");
+
+     over.forEach(function (item) {item.classList.add("overlay--close");});
 
      burger.addEventListener ("click", function (evt) {
      evt.preventDefault();
      menu.classList.toggle("nav-container--close");
-     over.classList.toggle("overlay--close");
+     over.forEach(function (item) {item.classList.toggle("overlay--close");});
      burger.classList.toggle("menu-button--close");
     });
 

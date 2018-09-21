@@ -3,34 +3,13 @@
   margin-top: -305px;
   .tablet(@rules: {
     min-height: 800px;
-    margin-top: -120px;
+    margin-top: -135px;
   });
   .mobile(@rules: {
     margin-top: -75px;
     min-height: 650px;
   });
 
-  .aside {
-    margin-top: 210px;
-  }
-
-}
-.features__inner {
-  .mobile(@rules: {
-    display: none;
-   });
-   .tablet(@rules: {
-     display: none;
-    });
-    width: 1920px;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: -360px;
-    height: 100%;
-    background: url("../images/features.svg") -183px 200px no-repeat,
-  linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%),
-  url("../images/features-desk.png") 260px 200px no-repeat;
 }
 
 .features__wrapper {
@@ -39,6 +18,9 @@
   margin: 0 auto;
   width: 1200px;
   .flex-block();
+  background: url("../images/features.svg") -183px 200px no-repeat,
+  linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%),
+  url("../images/features-desk.png") 260px 200px no-repeat;
 
 
   .tablet(@rules: {
@@ -69,9 +51,20 @@ linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%),
        url("../images/features-tablet.png") 0px 140px no-repeat;
   });
 
+
+  @media(min-width: 1920px) {
+    width: 1920px;
+    padding-left: 360px;
+    padding-right: 360px;
+    background: url("../images/features.svg") -183px 200px no-repeat,
+    linear-gradient(144.66deg, #F3F8FF 8.57%, rgba(255, 255, 255, 0.5) 114.31%),
+    url("../images/features-desk.png") 260px 200px no-repeat;
+  }
+
   .aside {
-    padding-top: 260px;
-    padding-bottom: 330px;
+
+      top: 470px;
+
   }
 }
 
