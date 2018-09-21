@@ -6,11 +6,15 @@
 }
 
 .page-header {
-  margin: 0 auto;
-  position: relative;
+  position: fixed;
+  background: white;
   width: 320px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
   margin-bottom: 0px;
     min-height: 50px;
+    z-index: 9;
 }
 
 .nav-container {
@@ -41,9 +45,8 @@
 @media (min-width: 768px) {
 .page-header {
   margin: 0 auto;
-  position: relative;
   width: 768px;
-  margin-bottom: -10px;
+  padding-bottom: 10px;
   z-index: 10;
   display: flex;
   justify-content: flex-start;
@@ -78,9 +81,10 @@
 @media (min-width: 1200px) {
 .page-header {
   margin: 0 auto;
-  position: relative;
   width: 1200px;
-  margin-bottom: -10px;
+  background:
+  url("../images/kheder.svg") -320px 0 no-repeat,
+  white;
 }
 
 .page-navigation {
@@ -118,6 +122,7 @@
 
   .page-navigation {
     margin-left: 0;
+
   }
 
   .header {
@@ -130,7 +135,10 @@
   }
   .page-header {
 width: 1920px;
-padding-top: 10px;
+
     margin-bottom: -30px;
+    background:
+    url("../images/kheder.svg") 24px 0 no-repeat,
+  white;
   }
 }
