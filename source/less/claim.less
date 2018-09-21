@@ -44,21 +44,13 @@
   padding-bottom: 90px;
   z-index: 5;
   position: relative;
-}
-
-.claim__inner {
-  .mobile(@rules: {
-   background: none;
-  });
-  .tablet(@rules: {
-    background: none;
-   });
-  position: absolute;
-  width: 1920px;
-  height: 100%;
-  top: 0;
-  left: -360px;
-  background: url("../images/forma.svg") 10px -290px no-repeat;
+  background: url("../images/forma.svg") -360px -290px no-repeat;
+  @media(min-width: 1920px) {
+    width: 1920px;
+    padding-left: 370px;
+    padding-right: 360px;
+    background: url("../images/forma.svg") 3px -290px no-repeat;
+  }
 }
 
 .claim__header {
