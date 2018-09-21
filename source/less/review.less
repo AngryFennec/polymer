@@ -78,10 +78,6 @@
   margin-bottom: 20px;
 }
 
-.review__back {
-  position: absolute;
-}
-
 .review__form-wrapper {
   width: 270px;
   margin: 0 auto;
@@ -164,12 +160,11 @@
 @media (min-width: 1200px) {
   .review {
     width: 1200px;
-    background: transparent;
+    background: url("../images/examples-back1.svg") no-repeat -360px -660px;
   }
 
   .review__slider {
     width: 1080px;
-
     padding-left: 20px;
     padding-right: 5px;
     display: flex;
@@ -189,31 +184,25 @@
     &--left {
       left: 0px;
     }
-
     &--right {
       right: 0px;
     }
   }
 
-  .review__back {
-    position: absolute;
-    width: 1920px;
-    height: 100%;
-    left: -360px;
-    top: 0;
-    background: url("../images/examples-back1.svg") no-repeat 0 -660px;
-    z-index: -1;
-  }
 
   .review__block--2 {
-
-      display: block;
-
+    display: block;
   }
 
   .review__block--3 {
-
     display: block;
-
+  }
 }
+@media (min-width: 1920px) {
+  .review {
+    width: 1920px;
+    padding-left: 380px;
+    padding-right: 380px;
+    background: url("../images/examples-back1.svg") no-repeat 0 -660px;
+  }
 }
