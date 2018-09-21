@@ -30,7 +30,7 @@
             </ul>
             <div class="menu__outer">
               <a class="menu__outer-link" href=tel:+74959663120>+7(495)966-31-20</a>
-              <a class="menu__outer-btn button callback">Заказать звонок</a>
+              <a class="menu__outer-btn button callback menu-list-button-open">Заказать звонок</a>
             </div>
           </div>
         </nav>
@@ -39,7 +39,7 @@
         </button>
         <div class="menu__nav">
           <a class="menu__nav-link" href=tel:+74959663120>+7(495)966-31-20</a>
-          <a class="menu__nav-btn button callback">Заказать звонок</a>
+          <a class="menu__nav-btn button callback header-button-open">Заказать звонок</a>
         </div>
       </div>
       </header>
@@ -181,7 +181,7 @@
                     <li class="tabs__inner-item">Сушка (5-7 часов)</li>
                   </ul>
                   <b class="tabs__inner-price"><span class="tabs__inner-price--uppercase">Цена: </span>14 000 рублей.</b>
-                  <button class="tabs__inner-button button callback">Оставить заявку</button>
+                  <button class="tabs__inner-button button callback work-button-open">Оставить заявку</button>
                 </section>
               </div>
             </div>
@@ -575,15 +575,41 @@
             </p>
           </div>
           </footer>
-          <section class="feadback visually-hidden">
+          <section class="feadback visually-hidden header-button">
             <div class="feadback__window">
-              <p class="feadback__legend">Заказать обратный звонок</p>
+              <p class="feadback__legend">Заказать звонок</p>
               <form class="feadback__form" action="send.php" method="post">
                 <label class="feadback__label" for="name-of-user">Как к Вам обратиться?</label>
                 <input class="feadback__name" id="name-of-user" name="name-of-user" type="text" placeholder="Ваше имя" required>
                 <label class="feadback__label feadback__label--big" for="phone-of-user">Напишите Ваш номер телефона</label>
                 <input class="feadback__phone" id="phone-of-user" name="phone-of-user" type="tel" placeholder="+7(___) ___-__-__" required pattern=\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}>
-                <button class="feadback__button button" type="submit">Перезвоните мне</button>
+                <button class="feadback__button button" type="submit">Заказать звонок</button>
+              </form>
+              <button type="button" class="feadback__close-button"></button>
+            </div>
+          </section>
+          <section class="feadback visually-hidden menu-list-button">
+            <div class="feadback__window">
+              <p class="feadback__legend">Заказать звонок</p>
+              <form class="feadback__form" action="send.php" method="post">
+                <label class="feadback__label" for="name-of-user">Как к Вам обратиться?</label>
+                <input class="feadback__name" id="name-of-user" name="name-of-user" type="text" placeholder="Ваше имя" required>
+                <label class="feadback__label feadback__label--big" for="phone-of-user">Напишите Ваш номер телефона</label>
+                <input class="feadback__phone" id="phone-of-user" name="phone-of-user" type="tel" placeholder="+7(___) ___-__-__" required pattern=\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}>
+                <button class="feadback__button button" type="submit">Заказать звонок</button>
+              </form>
+              <button type="button" class="feadback__close-button"></button>
+            </div>
+          </section>
+          <section class="feadback visually-hidden work-button">
+            <div class="feadback__window">
+              <p class="feadback__legend">Заказать звонок</p>
+              <form class="feadback__form" action="send.php" method="post">
+                <label class="feadback__label" for="name-of-user">Как к Вам обратиться?</label>
+                <input class="feadback__name" id="name-of-user" name="name-of-user" type="text" placeholder="Ваше имя" required>
+                <label class="feadback__label feadback__label--big" for="phone-of-user">Напишите Ваш номер телефона</label>
+                <input class="feadback__phone" id="phone-of-user" name="phone-of-user" type="tel" placeholder="+7(___) ___-__-__" required pattern=\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}>
+                <button class="feadback__button button" type="submit">Заказать звонок</button>
               </form>
               <button type="button" class="feadback__close-button"></button>
             </div>
