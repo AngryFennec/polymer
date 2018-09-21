@@ -19,12 +19,7 @@ margin-top: -90px;
 }
 }
 .work__inner {
-  .mobile(@rules: {
-    display: none;
-   });
-   .tablet(@rules: {
-     display: none;
-    });
+
     width: 1920px;
     position: absolute;
     top: 0;
@@ -40,30 +35,33 @@ margin-top: -90px;
     display: none;
   }
   @media (min-width: 1920px) {
+    position: absolute;
+    left: 117px;
+    top: 350px;
     display: block;
-    padding-top: 300px;
+    padding-left: 0;
+    padding-top: 0;
   }
 }
 
 .work__wrapper {
-
-
   position: relative;
   margin-top: 68px;
   margin-bottom: 60px;
   margin: 0 auto;
   min-height: 1017px;
   width: 1200px;
+  padding-left: 20px;
   .flex-block();
-
-
-
   z-index: 5;
+  background:
+  url("../images/work-desktop.png") no-repeat 470px 220px,
+  url("../images/klass_avto.svg") -329px -247px no-repeat;
 
   .tablet(@rules: {
     width: 768px;
     margin-bottom: 0;
-MIN-HEIGHT: 982px;
+    MIN-HEIGHT: 982px;
     background: url("../images/work-tablet.png") no-repeat 100px 430px,
     url("../images/klass_avto_tabletka.svg") -3px -151px no-repeat;
   });
@@ -76,6 +74,15 @@ MIN-HEIGHT: 982px;
     background: url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat,
     url("../images/work-mobile.jpg") 0px 70px no-repeat;
   });
+
+  @media(min-width: 1920px) {
+    width: 1920px;
+    background:
+    url("../images/work-desktop.png") no-repeat 830px 220px,
+    url("../images/klass_avto.svg") 0px -247px no-repeat;
+    padding-left: 360px;
+    padding-right: 360px;
+  }
 }
 
 .work__content {
