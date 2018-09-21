@@ -9,10 +9,6 @@
     url("../images/advantage-gradient.png") no-repeat 0 341px;
 }
 
-.advantage__wrapper {
-  position: absolute;
-}
-
 .advantage__list {
   list-style: none;
   padding: 0;
@@ -110,21 +106,12 @@
 @media (min-width:1200px) {
   .advantage {
     width: 1200px;
+    background: url("../images/car-desktop.svg") no-repeat -280px 234px,
+    url("../images/advantage-back2.svg") no-repeat 1072px 242px,
+    url("../images/advantage-back1.svg") no-repeat 1129px 330px;
+    //url("../images/advantage-back-desktop.svg") no-repeat -6px -255px;
 
-    background: transparent;
-  }
 
-  .advantage__wrapper {
-    width: 1920px;
-    background: url("../images/car-desktop.svg") no-repeat 81px 234px,
-    url("../images/advantage-back2.svg") no-repeat 101% 88%,
-    url("../images/advantage-back1.svg") no-repeat 100% 292px,
-    url("../images/advantage-back-desktop.svg") no-repeat -6px -255px;
-
-    height: 100%;
-    top: 0;
-    left: -360px;
-    z-index: -1;
   }
 
   .advantage__header {
@@ -141,7 +128,6 @@
   }
 
   .advantage__item {
-
     font-size: 14px;
     line-height: 25px;
 
@@ -169,7 +155,6 @@
     &:nth-child(4) {
       order: 4;
       width: 280px;
-
       margin-left: 472px;
       margin-top: 28px;
     }
@@ -187,5 +172,18 @@
       margin-top: -60px;
       margin-left: 0;
     }
+  }
+}
+@media (min-width: 1920px) {
+  .advantage {
+    width: 1920px;
+    padding-left: 380px;
+    padding-right: 380px;
+    background: url("../images/car-desktop.svg") no-repeat 80px 234px,
+    url("../images/advantage-back2.svg") no-repeat 1435px 242px,
+    url("../images/advantage-back1.svg") no-repeat 1491px 330px,
+    url("../images/advantage-back-desktop.svg") no-repeat -1px -265px;
+
+
   }
 }
