@@ -1,5 +1,5 @@
 .head {
-min-height: 1040px;
+min-height: 900px;
 width: 1200px;
 margin: 0 auto;
 background: url("../images/head-desktop.png") 260px 320px no-repeat,
@@ -24,19 +24,23 @@ z-index: 5;
   @media(min-width: 1920px){
     width: 1920px;
     margin: 0 auto;
-    margin-top: -8px;
+    margin-top: -0px;
+    padding-top: 20px;
     background: url("../images/head-desktop.png") 640px 320px no-repeat,
     url("../images/border.svg") 400px 220px no-repeat,
-    url("../images/kheder.svg") 10px 0 no-repeat;
+    url("../images/kheder.svg") 0px 0 no-repeat;
     z-index: 5;
+
+    .aside {
+      margin-top: -15px;
+    }
   }
 }
-
 
 .head__back {
   padding-top: 60px;
   z-index: 8;
-  min-height: 1040px;
+  min-height: 900px;
   position: relative;
 
   .tablet(@rules: {
