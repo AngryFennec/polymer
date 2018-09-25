@@ -1,16 +1,24 @@
 .work {
 
-  min-height: 1017px;
+  min-height: 1015px;
   .laptop(@rules: {
     padding-top: 0;
+    min-height: 1027px;
+
+    .aside {
+      padding-top: 360px;
+      padding-left: 0;
+      width: 150px;
+    }
+
   });
   .tablet(@rules: {
 margin-top: -90px;
-    min-height: 982px;
+    min-height: 1000px;
 
   });
   .mobile(@rules: {
-    min-height: 550px;
+    min-height: 531px;
 
   });
 .tabs {
@@ -49,28 +57,30 @@ margin-top: -90px;
   margin-top: 68px;
   margin-bottom: 60px;
   margin: 0 auto;
-  min-height: 1017px;
+  min-height: 1027px;
   width: 1200px;
-  padding-left: 20px;
+  padding-left: 35px;
   .flex-block();
   z-index: 5;
   background:
-  url("../images/work-desktop.png") no-repeat 470px 220px,
-  url("../images/klass_avto.svg") -329px -247px no-repeat;
+  url("../images/work-desktop.png") no-repeat 610px 310px,
+url("../images/border-mini.svg") 180px 200px no-repeat,
+  url("../images/klass_avto-1200.svg") -359px -237px no-repeat;
 
   .tablet(@rules: {
     width: 768px;
     margin-bottom: 0;
-    MIN-HEIGHT: 982px;
+    MIN-HEIGHT: 1000px;
     background: url("../images/work-tablet.png") no-repeat 100px 430px,
-    url("../images/klass_avto_tabletka.svg") -3px -151px no-repeat;
+    url("../images/klass_avto_tabletka.svg") -3px -131px no-repeat;
   });
 
   .mobile(@rules: {
     width: 320px;
     margin-bottom: 0;
     margin-top: 0;
-    min-height: 550px;
+    min-height: 531px;
+    padding-left: 0;
     background: url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat,
     url("../images/work-mobile.jpg") 0px 70px no-repeat;
   });
@@ -89,6 +99,11 @@ margin-top: -90px;
   width: 1270px;
   padding-top: 72px;
   margin-left: -30px;
+  .laptop(@rules: {
+    width: 1000px;
+
+    padding-top: 25px;
+  });
   .tablet(@rules: {
     width: 768px;
     margin: 0 auto;
@@ -103,16 +118,18 @@ margin-top: -90px;
 }
 
 .work__header {
-  margin-left: 25px;
+  margin-left: 32px;
   margin-bottom: 65px;
   .laptop(@rules: {
-    margin-left: 15px;
+    margin-left: 35px;
+    margin-top: 80px;
   });
   .tablet(@rules: {
-    margin-left: 20px;
+    margin-left: -10px;
     line-height: 39px;
     font-size: 27px;
-    margin-bottom: 25px;
+    margin-top: 45px;
+    margin-bottom: 20px;
   });
 
   .mobile(@rules: {
@@ -121,7 +138,7 @@ margin-top: -90px;
     line-height: 22px;
     font-size: 15px;
     margin-left: 20px;
-    margin-top: 2px;
+    margin-top: -20px;
     margin-bottom: 19px;
   });
 }
@@ -131,11 +148,17 @@ margin-top: -90px;
   .flex-block();
   margin-left:30px;
   margin-bottom: 22px;
-
+  .laptop(@rules: {
+    margin-left: 40px;
+    flex-wrap: wrap;
+    width: 600px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  });
   .tablet(@rules: {
     flex-wrap: wrap;
     width: 600px;
-    margin-left: 29px;
+    margin-left: -10px;
     margin-bottom: 15px;
   });
   .mobile(@rules: {
@@ -187,6 +210,10 @@ margin-top: -90px;
   });
 
   &:nth-child(4) {
+    .laptop(@rules: {
+      max-width: 120px;
+      margin-right: 0;
+    });
     .tablet(@rules: {
       max-width: 100px;
       margin-right: 28px;
@@ -199,6 +226,12 @@ margin-top: -90px;
   }
 
   &:nth-child(2) {
+
+    .laptop(@rules: {
+      margin-right: 75px;
+      margin-bottom: 10px;
+    });
+
     .tablet(@rules: {
       margin-right: 75px;
     });
@@ -212,6 +245,9 @@ margin-top: -90px;
   }
 
   &:nth-child(5) {
+    .laptop(@rules: {
+      max-width: 150px;
+    });
     .tablet(@rules: {
       margin-bottom: 0;
       margin-right: 40px;
@@ -223,6 +259,9 @@ margin-top: -90px;
   }
 
   &:nth-child(6) {
+    .laptop(@rules: {
+      max-width: 150px;
+    });
     .tablet(@rules: {
       margin-bottom: 0;
     });

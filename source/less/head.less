@@ -1,10 +1,10 @@
 .head {
-min-height: 1040px;
+min-height: 900px;
 width: 1200px;
 margin: 0 auto;
-background: url("../images/head-desktop.png") 260px 320px no-repeat,
-url("../images/border.svg") 40px 220px no-repeat,
-url("../images/kheder.svg") -320px 0 no-repeat;
+background: url("../images/head-desktop.png") 430px 320px no-repeat,
+url("../images/border-mini.svg") 190px 220px no-repeat,
+url("../images/kheder.svg") -195px 0 no-repeat;
 z-index: 5;
   .tablet(@rules: {
     width: 768px;
@@ -24,19 +24,23 @@ z-index: 5;
   @media(min-width: 1920px){
     width: 1920px;
     margin: 0 auto;
-    margin-top: -8px;
+    margin-top: -0px;
+    padding-top: 20px;
     background: url("../images/head-desktop.png") 640px 320px no-repeat,
     url("../images/border.svg") 400px 220px no-repeat,
-    url("../images/kheder.svg") 10px 0 no-repeat;
+    url("../images/kheder.svg") 0px 0 no-repeat;
     z-index: 5;
+
+    .aside {
+      margin-top: -15px;
+    }
   }
 }
-
 
 .head__back {
   padding-top: 60px;
   z-index: 8;
-  min-height: 1040px;
+  min-height: 900px;
   position: relative;
 
   .tablet(@rules: {
@@ -68,7 +72,8 @@ background: none;
   position: relative;
   z-index: 100;
   .laptop(@rules: {
-    margin-left: 20px;;
+    margin-left: 40px;;
+    padding-top: 20px;
 
   });
 
@@ -76,7 +81,7 @@ background: none;
     width: 660px;
     margin-bottom: 0;
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 25px;
   });
 
   .mobile(@rules: {
@@ -84,7 +89,7 @@ background: none;
     line-height: 21px;
     font-size: 15px;
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 00px;
     padding-right: 20px;
     margin-bottom: 0px;
   });
@@ -110,7 +115,7 @@ width: 1200px;
     margin: 0 auto;
     padding-left: 20px;
     width: 320px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   });
 }
 .head__wrapper {
@@ -177,8 +182,8 @@ width: 1200px;
     padding-top: 35px;
     min-height: 702px;
     //border: 0.5px solid @blue;
-    padding-left: 10px;
-    margin-left: 45px;
+    padding-left: 00px;
+    margin-left: 0px;
     font-family: @main-font;
     margin-top: -22px;
     line-height: 35px;
