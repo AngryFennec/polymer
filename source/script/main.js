@@ -105,8 +105,8 @@
       $(svg[i]).css("fill", "#0047FF");
     });
 
-    var button=document.querySelectorAll(".callback");
-    var modal=document.querySelector(".feadback");
+    var button=document.querySelector(".menu-list-button-open");
+    var modal=document.querySelector(".menu-list-button");
     var closeButton=modal.querySelector(".feadback__close-button");
 
     var isValid = function(sample) {
@@ -124,28 +124,85 @@
       element.classList.add("visually-hidden");
     }
 
-    for (var i = 0; i <= (button.length-1); i++) {
-      button[i].addEventListener ("click", function (evt) {
-        show(evt, modal);
-      });
-    }
+    button.addEventListener ("click", function (evt) {
+      menu.classList.toggle("nav-container--close");
+      over.forEach(function (item) {item.classList.toggle("overlay--close");});
+      burger.classList.toggle("menu-button--close");
+      show(evt, modal);
+    });
 
     closeButton.addEventListener ("click", function (evt) {
       hidden(evt, modal);
     });
 
+    var button2=document.querySelector(".header-button-open");
+    var modal2=document.querySelector(".header-button");
+    var closeButton2=modal2.querySelector(".feadback__close-button");
+
+    var isValid = function(sample) {
+      var regexp = /\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}/;
+      return regexp.test(sample);
+    };
+
+    var show = function(e,element) {
+      e.preventDefault();
+      element.classList.remove("visually-hidden");
+    }
+
+    var hidden = function(e,element) {
+      e.preventDefault();
+      element.classList.add("visually-hidden");
+    }
+
+    button2.addEventListener ("click", function (evt) {
+      show(evt, modal2);
+    });
+
+    closeButton2.addEventListener ("click", function (evt) {
+      hidden(evt, modal2);
+    });
+    var button3=document.querySelector(".work-button-open");
+    var modal3=document.querySelector(".work-button");
+    var closeButton3=modal3.querySelector(".feadback__close-button");
+
+    var isValid = function(sample) {
+      var regexp = /\+\d{1}\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}/;
+      return regexp.test(sample);
+    };
+
+    var show = function(e,element) {
+      e.preventDefault();
+      element.classList.remove("visually-hidden");
+    }
+
+    var hidden = function(e,element) {
+      e.preventDefault();
+      element.classList.add("visually-hidden");
+    }
+
+    button3.addEventListener ("click", function (evt) {
+      show(evt, modal3);
+    });
+
+    closeButton3.addEventListener ("click", function (evt) {
+      hidden(evt, modal3);
+    });
+
+
+
  var burger = document.querySelector(".menu-button");
    var menu = document.querySelector(".nav-container");
-   var over = document.querySelector(".overlay");
+   var over = Array.prototype.slice.call(document.querySelectorAll(".overlay"));
 
     menu.classList.add("nav-container--close");
      burger.classList.add("menu-button--close");
-     over.classList.add("overlay--close");
+
+     over.forEach(function (item) {item.classList.add("overlay--close");});
 
      burger.addEventListener ("click", function (evt) {
      evt.preventDefault();
      menu.classList.toggle("nav-container--close");
-     over.classList.toggle("overlay--close");
+     over.forEach(function (item) {item.classList.toggle("overlay--close");});
      burger.classList.toggle("menu-button--close");
     });
 

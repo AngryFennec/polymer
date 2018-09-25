@@ -1,3 +1,11 @@
+.page-header {
+  width: 100%;
+  position: fixed;
+  background: white;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
 .page-navigation {
   position: relative;
   margin-top: 0;
@@ -5,12 +13,14 @@
 
 }
 
-.page-header {
-  margin: 0 auto;
+.page-header__wrapper {
   position: relative;
+  background: white;
   width: 320px;
-  margin-bottom: 0px;
-    min-height: 50px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+    min-height: 60px;
+    z-index: 9;
 }
 
 .nav-container {
@@ -39,11 +49,10 @@
 }
 
 @media (min-width: 768px) {
-.page-header {
+.page-header__wrapper {
   margin: 0 auto;
-  position: relative;
   width: 768px;
-  margin-bottom: -10px;
+  padding-bottom: 10px;
   z-index: 10;
   display: flex;
   justify-content: flex-start;
@@ -53,7 +62,8 @@
 }
 .nav-container {
   box-shadow: none;
-  position: relative;
+  position: absolute;
+  left: -150px;
   width: 300px;
   background-color: @white;
   margin-left: 0;
@@ -65,7 +75,7 @@
 }
 
 .header {
-  width: 768px;
+  width: 300px;
   padding-top: 22px;
   z-index: 150;
 }
@@ -75,26 +85,29 @@
 }
 
 @media (min-width: 1200px) {
-.page-header {
+.page-header__wrapper {
   margin: 0 auto;
-  position: relative;
   width: 1200px;
-  margin-bottom: -10px;
+  background:
+  url("../images/kheder.svg") -320px 0 no-repeat,
+  white;
 }
 
 .page-navigation {
   width: 500px;
 }
 .nav-container {
+  position: absolute;
+  left: -150px;
   box-shadow: none;
-  position: relative;
   width: 500px;
   margin-left: 0;
+  padding-left: 50px;
 }
 
 .header {
-  width: 1200px;
-  padding-top: 25px;
+  width: 300px;
+  padding-top: 35px;
     z-index: 150;
 }
 .header__logo {
@@ -110,23 +123,28 @@
     width: 1920px;
     margin: 0 auto;
     box-shadow: none;
+    z-index: 0;
   }
 
   .page-navigation {
     margin-left: 0;
+
   }
 
   .header {
-    width: 1920px;
+    width: 300px;
     padding-top: 30px;
   }
   .header__logo {
     padding-top: 0;
-    padding-left: 120px;
+    padding-left: 200px;
   }
-  .page-header {
+  .page-header__wrapper {
 width: 1920px;
-padding-top: 10px;
+
     margin-bottom: -30px;
+    background:
+    url("../images/kheder.svg") 16px 0 no-repeat,
+  white;
   }
 }
