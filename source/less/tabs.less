@@ -14,7 +14,7 @@
   });
 
   .mobile(@rules: {
-    min-height: 305px;
+    min-height: 275px;
     width: 320px;
     border: none;
     padding-top: 0;
@@ -28,6 +28,9 @@
   font-size: 18px;
   color: @black;
   margin-bottom: 16px;
+  .laptop(@rules: {
+    margin-left: 77px;
+  });
   .tablet(@rules: {
     margin-bottom: 0;
     display: none;
@@ -46,7 +49,12 @@
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
-
+  .laptop(@rules: {
+    margin-left: 42px;
+  });
+  .tablet(@rules: {
+    margin-left: 0px;
+  });
   .mobile(@rules: {
     margin-bottom: 3px;
   });
@@ -71,7 +79,7 @@
   }
 
   .tablet(@rules: {
-    margin-left: 30px;
+    margin-left: 0px;
     &::before {
       margin-top: 20px;
     }
@@ -97,9 +105,11 @@
     text-transform: uppercase;
   }
   margin-bottom: 23px;
-
+  .laptop(@rules: {
+    margin-left: 88px;
+  });
   .tablet(@rules: {
-    margin-left: 18px;
+    margin-left: -10px;
   });
   .mobile(@rules: {
     line-height: 24px;
@@ -111,8 +121,12 @@
 
 .tabs__inner-button {
   margin-left: 38px;
+  .laptop(@rules: {
+    margin-left: 88px;
+  });
   .tablet(@rules: {
-    margin-left: 20px;
+    height: 45px;
+    margin-left: -15px;
   });
   .mobile(@rules: {
     margin-left: 24px;
