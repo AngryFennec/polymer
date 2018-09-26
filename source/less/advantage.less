@@ -9,6 +9,10 @@
     url("../images/advantage-gradient.png") no-repeat 0 341px;
 }
 
+.advantage__aside {
+  display: none;
+}
+
 .advantage__list {
   list-style: none;
   padding: 0;
@@ -110,10 +114,15 @@
     url("../images/advantage-back2.svg") no-repeat 1072px 242px,
     url("../images/advantage-back1.svg") no-repeat 1129px 330px;
     //url("../images/advantage-back-desktop.svg") no-repeat -6px -255px;
-
-
   }
 
+  .advantage__aside {
+
+   position: absolute;
+   left: 0;
+   top: 200px;
+   background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255, 255, 255, 0.8),  rgba(255, 255, 255, 0.1));
+  }
   .advantage__header {
     padding: 0;
     padding-top: 28px;
@@ -183,7 +192,11 @@
     url("../images/advantage-back2.svg") no-repeat 1435px 242px,
     url("../images/advantage-back1.svg") no-repeat 1491px 330px,
     url("../images/advantage-back-desktop.svg") no-repeat -1px -265px;
-
-
   }
+
+  .advantage__aside {
+    padding-top: 100px;
+    top: 200px;
+    display: block;
+   }
 }
