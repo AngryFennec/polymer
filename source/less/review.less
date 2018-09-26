@@ -8,6 +8,10 @@
   flex-direction: column;
 }
 
+.review__aside {
+  display: none;
+}
+
 .review__block {
   font-family: @second-font;
   font-size: 13px;
@@ -161,10 +165,11 @@
   .review {
     width: 1200px;
     background: url("../images/examples-back1.svg") no-repeat -360px -660px;
+    padding-left: 155px;
   }
 
   .review__slider {
-    width: 1080px;
+    width: 1000px;
     padding-left: 20px;
     padding-right: 5px;
     display: flex;
@@ -177,19 +182,25 @@
   }
   .review__header {
     margin-top: 45px;
+    padding-left: 50px;
   }
 
   .review__button {
     top: 210px;
     &--left {
-      left: 0px;
+      left: 150px;
     }
     &--right {
       right: 0px;
     }
   }
 
-
+  .review__aside {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 30px;
+  }
   .review__block--2 {
     display: block;
   }
@@ -214,5 +225,13 @@
     &--right {
       right: 360px;
     }
+  }
+
+  .review__aside {
+    padding-top: 50px;
+  }
+
+  .review__header {
+    padding-left: 0;
   }
 }

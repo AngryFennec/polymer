@@ -6,6 +6,10 @@
   filter: grayscale(100%);
 }
 
+.contacts__aside {
+  display: none;
+}
+
 .contacts {
   display: flex;
   flex-direction: column;
@@ -129,16 +133,28 @@
 
 @media (min-width: 1200px) {
   .contacts__wrapper {
-    width: 1200px;
+    width: 850px;
   }
 
   .contacts__header {
     margin-bottom: 52px;
     margin-top: 10px;
     width: 1200px;
+    padding-left: 200px;
   }
 
   .contacts__map {
     height: 685px;
   }
+}
+
+@media (min-width: 1920px) {
+  .contacts__wrapper {
+    width: 1200px;
+  }
+
+  .contacts__header {
+    padding-left: 20px;
+  }
+
 }
