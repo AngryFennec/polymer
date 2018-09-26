@@ -1,0 +1,47 @@
+.aside {
+  .mobile(@rules: {
+    display: none;
+  });
+  .tablet(@rules: {
+    display: none;
+  });
+  .laptop(@rules: {
+    display: block;
+    padding-top: 30px;
+    padding-left: 35px;
+    width: 270px;
+    });
+  padding-top: 305px;
+  padding-bottom: 400px;
+  width: 330px;
+  padding-left: 117px;
+  font-family: @main-font;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: @placeholder;
+  a {
+      color: @placeholder;
+  }
+
+}
+
+.aside__list {
+  .no-list();
+  margin: 0 auto;
+}
+
+.aside__list-item {
+  margin-bottom: 42px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--active {
+    a{
+    font-family: @main-font-semi;
+    color: @dark;
+  }
+  }
+}
