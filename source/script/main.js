@@ -225,15 +225,32 @@
       "../images/work-desktop-prem.png"];
     var workButtons = Array.prototype.slice.call(document.querySelectorAll(".work__options-item"));
     var workWrapper = document.querySelector(".work__wrapper");
-    workButtons.forEach((item, i) => {
-      item.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        workButtons.forEach(item => {
-          item.classList.remove('work__options-item--active');
-        });
-        workWrapper.style.background = 'url(' + imagesArray[i] + ') 830px 220px no-repeat,' + ' url("../images/klass_avto.svg") 0px -247px no-repeat';
-        this.classList.add('work__options-item--active');
-      });
-    })
+    window.onresize = function () {
+      if (window.innerWidth >= 1920) {
+        workButtons.forEach((item, i) => {
+          item.addEventListener("click", function(evt) {
+            evt.preventDefault();
+            workButtons.forEach(item => {
+              item.classList.remove('work__options-item--active');
+            });
+            workWrapper.style.background = 'url(' + imagesArray[i] + ') 830px 220px no-repeat,' + ' url("../images/klass_avto.svg") 0px -247px no-repeat';
+            this.classList.add('work__options-item--active');
+          });
+        })
+      }
+      else {
+        workButtons.forEach((item, i) => {
+          item.removeEventListener("click", function(evt) {
+            evt.preventDefault();
+            workButtons.forEach(item => {
+              item.classList.remove('work__options-item--active');
+            });
+            workWrapper.style.background = 'url(' + imagesArray[i] + ') 830px 220px no-repeat,' + ' url("../images/klass_avto.svg") 0px -247px no-repeat';
+            this.classList.add('work__options-item--active');
+          });
+        })
+      }
+    };
+
 
 })();
