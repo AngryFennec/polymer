@@ -256,7 +256,7 @@
     var priceValue = document.querySelector('.tabs__inner-price-value');
     function onStartCallbacks() {
       priceValue.textContent = pricesArray[findIndex()];
-      workButtons.forEach((item, i) => {
+      workButtons.forEach(function(item, i) {
         item.addEventListener("click", setItemImg(item, i));
         item.classList.remove('work__options-item--active');
         workImgs[i].style = "display: none;";
@@ -267,7 +267,7 @@
 
     function findIndex() {
       var ind = 0;
-      workButtons.forEach((item, i) => {
+      workButtons.forEach(function (item, i) {
         if (item.classList.contains('work__options-item--active')) {
           ind = i;
         }
@@ -278,7 +278,7 @@
     function setItemImg(workButton, index) {
       return function (evt) {
         evt.preventDefault();
-        workButtons.forEach((item, i) => {
+        workButtons.forEach(function (item, i) {
           item.classList.remove('work__options-item--active');
           workImgs[i].style = "display: none;";
         });
