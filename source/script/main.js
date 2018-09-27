@@ -263,7 +263,7 @@
         workButtons.forEach(item => {
           item.classList.remove('work__options-item--active');
         });
-        workWrapper.style.background = 'url(' + imagesArray[index] + ') 610px 310px no-repeat,' + ' url("../images/border-mini.svg") 330px 280px no-repeat, url("../images/klass_avto-1200.svg") -359px -237px no-repeat';
+        workWrapper.style.background = 'url(' + imagesArray[index] + ') 610px 310px no-repeat,' + ' url("../images/border-mini.svg") 200px 305px no-repeat, url("../images/klass_avto-1200.svg") -359px -237px no-repeat';
             this.classList.add('work__options-item--active');
           };
         }
@@ -295,21 +295,25 @@
         }
     function onStartCallbacks() {
       if (document.body.clientWidth >= 1920) {
+        workWrapper.style.background = 'url(' + imagesArray[findIndex()] + ') 830px 220px no-repeat,' + ' url("../images/klass_avto.svg") 0px -247px no-repeat';
         workButtons.forEach((item, i) => {
           item.addEventListener("click", setDesktopBackground(item, i));
         });
       }
       else if (document.body.clientWidth < 1920 && document.body.clientWidth >= 1200) {
+        workWrapper.style.background = 'url(' + imagesArray[findIndex()] + ') 610px 310px no-repeat,' + ' url("../images/border-mini.svg") 200px 305px no-repeat, url("../images/klass_avto-1200.svg") -359px -237px no-repeat';
         workButtons.forEach((item, i) => {
           item.addEventListener("click", setLaptopBackground(item, i));
         });
       }
       else if (document.body.clientWidth < 1200 && document.body.clientWidth >= 768) {
+        workWrapper.style.background = 'url(' + imagesTabletArray[findIndex()] + ') no-repeat 100px 430px,' + ' url("../images/klass_avto_tabletka.svg") -3px -131px no-repeat';
         workButtons.forEach((item, i) => {
           item.addEventListener("click", setTabletBackground(item, i));
         });
       }
       else {
+        workWrapper.style.background = 'url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat, url(' + imagesMobileArray[findIndex()] + ') 0px 70px no-repeat';
         workButtons.forEach((item, i) => {
           item.addEventListener("click", setMobileBackground(item, i));
         });
@@ -318,5 +322,16 @@
     window.onresize = function () {
       onStartCallbacks();
     };
+
+    function findIndex() {
+      var ind = 0;
+      workButtons.forEach((item, i) => {
+        if (item.classList.contains('work__options-item--active')) {
+          ind = i;
+        }
+      });
+      return ind;
+    }
+
     onStartCallbacks();
 })();
