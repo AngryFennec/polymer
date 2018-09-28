@@ -193,18 +193,26 @@
  var burger = document.querySelector(".menu-button");
    var menu = document.querySelector(".nav-container");
    var over = Array.prototype.slice.call(document.querySelectorAll(".overlay"));
+   var menuItems = Array.prototype.slice.call(menu.querySelectorAll(".menu__item-href"));
 
 
-    menu.classList.add("nav-container--close");
-     burger.classList.add("menu-button--close");
+   menu.classList.add("nav-container--close");
+    burger.classList.add("menu-button--close");
 
-     over.forEach(function (item) {item.classList.add("overlay--close");});
+    over.forEach(function (item) {item.classList.add("overlay--close");});
 
      burger.addEventListener ("click", function (evt) {
-     evt.preventDefault();
-     menu.classList.toggle("nav-container--close");
-     over.forEach(function (item) {item.classList.toggle("overlay--close");});
-     burger.classList.toggle("menu-button--close");
+       evt.preventDefault();
+       menu.classList.toggle("nav-container--close");
+       over.forEach(function (item) {item.classList.toggle("overlay--close");});
+       burger.classList.toggle("menu-button--close");
+    });
+    menuItems.forEach(function (item) {
+      item.addEventListener ("click", function (evt) {
+        menu.classList.toggle("nav-container--close");
+        over.forEach(function (item) {item.classList.toggle("overlay--close");});
+        burger.classList.toggle("menu-button--close");
+      });
     });
 
     var examplesButton = document.querySelector(".examples__button");
@@ -315,6 +323,7 @@
         }
     function onStartCallbacks() {
       priceValue.textContent = pricesArray[findIndex()];
+      console.log(document.body.clientWidth);
       if (document.body.clientWidth >= 1920) {
         workWrapper.style.background = 'url(' + imagesArray[findIndex()] + ') 830px 280px no-repeat,' + ' url("./images/klass_avto.svg") 0px -247px no-repeat';
         workButtons.forEach((item, i) => {
@@ -336,7 +345,7 @@
       }
       else if (document.body.clientWidth < 1200 && document.body.clientWidth >= 768) {
         var position = '170px 480px';
-        if (index !== 2) {
+        if (findIndex() !== 2) {
           position = '240px 480px';
         }
         workWrapper.style.background = 'url(' + imagesTabletArray[findIndex()] + ') no-repeat ' + position +',' + ' url("./images/klass_avto_tabletka.svg") -3px -115px no-repeat';
