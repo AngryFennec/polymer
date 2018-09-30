@@ -1,11 +1,23 @@
 .work {
 
   min-height: 1015px;
+  .aside {
+    position: absolute;
+    left: 117px;
+    top: 350px;
+    display: block;
+    padding-left: 0;
+    padding-top: 0;
+  }
   .laptop(@rules: {
     padding-top: 0;
     min-height: 1027px;
 
     .aside {
+      position: relative;
+      display: block;
+      top: 0;
+      left: 0;
       padding-top: 360px;
       padding-left: 0;
       width: 150px;
@@ -15,11 +27,16 @@
   .tablet(@rules: {
 margin-top: -90px;
     min-height: 1000px;
+    .aside {
+      display: none;
+    }
 
   });
   .mobile(@rules: {
     min-height: 531px;
-
+    .aside {
+      display: none;
+    }
   });
 .tabs {
   margin-left: 0;
@@ -33,9 +50,6 @@ margin-top: -90px;
     top: 0;
     left: -360px;
     height: 100%;
-    background:
-    url("../images/work-desktop.png") no-repeat 830px 220px,
-    url("../images/klass_avto.svg") 0px -247px no-repeat;
 }
 
 .work__aside {
@@ -43,12 +57,12 @@ margin-top: -90px;
     display: none;
   }
   @media (min-width: 1920px) {
-    position: absolute;
-    left: 117px;
-    top: 350px;
-    display: block;
-    padding-left: 0;
-    padding-top: 0;
+  position: absolute;
+  left: 117px;
+  top: 350px;
+  display: block;
+  padding-left: 0;
+  padding-top: 0;
   }
 }
 
@@ -58,46 +72,55 @@ margin-top: -90px;
   margin-bottom: 60px;
   margin: 0 auto;
   min-height: 1027px;
-  width: 1200px;
-  padding-left: 35px;
   .flex-block();
   z-index: 5;
+  width: 1920px;
   background:
-  url("../images/work-desktop.png") no-repeat 610px 310px,
-url("../images/border-mini.svg") 180px 320px no-repeat,
-  url("../images/klass_avto-1200.svg") -359px -237px no-repeat;
+  url("../images/klass_avto.svg") -15px -267px no-repeat;
+  padding-left: 360px;
+  padding-right: 360px;
+
+  .laptop(@rules: {
+    position: relative;
+    margin-top: 68px;
+    margin-bottom: 60px;
+    margin: 0 auto;
+    min-height: 1027px;
+    width: 1200px;
+    padding-left: 35px;
+    .flex-block();
+    z-index: 5;
+    background:
+  url("../images/border-mini.svg") 180px 320px no-repeat,
+    url("../images/klass_avto-1200.svg") -359px -237px no-repeat;
+
+    });
 
   .tablet(@rules: {
     width: 768px;
+    margin: 0 auto;
     margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 40px;
+    padding-left: 35px;
     MIN-HEIGHT: 1000px;
-    background: url("../images/work-tablet.png") no-repeat 100px 430px,
-    url("../images/klass_avto_tabletka.svg") -3px -131px no-repeat;
+    background: url("../images/klass_avto_tabletka.svg") -3px -131px no-repeat;
   });
 
   .mobile(@rules: {
     width: 320px;
+    margin: 0 auto;
     margin-bottom: 0;
     margin-top: 0;
     min-height: 531px;
     padding-left: 0;
-    background: url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat,
-    url("../images/work-mobile.jpg") 0px 70px no-repeat;
+    background: url("../images/features-work-mobile-pseudo1.png") -57px -2px no-repeat;
   });
-
-  @media(min-width: 1920px) {
-    width: 1920px;
-    background:
-    url("../images/work-desktop.png") no-repeat 830px 220px,
-    url("../images/klass_avto.svg") 0px -247px no-repeat;
-    padding-left: 360px;
-    padding-right: 360px;
-  }
 }
 
 .work__content {
   width: 1270px;
-  padding-top: 72px;
+  padding-top: 52px;
   margin-left: -30px;
   .laptop(@rules: {
     width: 1000px;

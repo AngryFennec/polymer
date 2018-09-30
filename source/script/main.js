@@ -249,10 +249,47 @@
           var pricesArray = [
             '40 800', '40 800', '37 600', '31 200', '37 600', '48 800'
           ];
+
     var workButtons = Array.prototype.slice.call(document.querySelectorAll(".work__options-item"));
     var workWrapper = document.querySelector(".work__wrapper");
+    var workImgs = document.querySelectorAll(".tabs__img");
     var priceValue = document.querySelector('.tabs__inner-price-value');
-    function setDesktopBackground(workButton, index) {
+    function onStartCallbacks() {
+      priceValue.textContent = pricesArray[findIndex()];
+      workButtons.forEach((item, i) => {
+        item.addEventListener("click", setItemImg(item, i));
+        item.classList.remove('work__options-item--active');
+        workImgs[i].style = "display: none;";
+      });
+      workImgs[findIndex()].style = "display: block;";
+      workButtons[findIndex()].classList.add('work__options-item--active');
+    }
+
+    function findIndex() {
+      var ind = 0;
+      workButtons.forEach((item, i) => {
+        if (item.classList.contains('work__options-item--active')) {
+          ind = i;
+        }
+      });
+      return ind;
+    }
+
+    function setItemImg(workButton, index) {
+      return function (evt) {
+        evt.preventDefault();
+        workButtons.forEach((item, i) => {
+          item.classList.remove('work__options-item--active');
+          workImgs[i].style = "display: none;";
+        });
+        workImgs[index].style = "display: block;";
+        workButton.classList.add('work__options-item--active');
+        priceValue.textContent = pricesArray[index];
+      };
+    }
+    onStartCallbacks();
+
+    /*function setDesktopBackground(workButton, index) {
       return function (evt) {
         evt.preventDefault();
         workButton.classList.remove('work__options-item--active');
@@ -262,7 +299,12 @@
         workButtons.forEach(item => {
           item.classList.remove('work__options-item--active');
         });
-        workWrapper.style.background = 'url(' + imagesArray[index] + ') 830px 280px no-repeat,' + ' url("./images/klass_avto.svg") 0px -247px no-repeat';
+        workImg.setAttribute("src", imagesArray[index]);
+        var style = "position: absolute; top: 30px; right: -330px;";
+        if (index != 2) {
+          style = "position: absolute; top: 50px; right: -530px;";
+        }
+        workImg.style = style;
         workButton.classList.add('work__options-item--active');
         priceValue.textContent = pricesArray[index];
       };
@@ -276,14 +318,13 @@
         workButtons.forEach(item => {
           item.classList.remove('work__options-item--active');
         });
-        var position = '610px 310px';
-        if (index === 0 || index === 4) {
-          position = '660px 370px';
+        workImg.setAttribute("src", imagesArray[index]);
+        var style = "position: absolute; top: 30px; right: -330px;";
+        if (index != 2) {
+          style = "position: absolute; top: 50px; right: -530px;";
         }
-        if (index === 3 || index === 5) {
-          position = '650px 370px';
-        }
-        workWrapper.style.background = 'url(' + imagesArray[index] + ')' + position + ' no-repeat,' + ' url("./images/border-mini.svg") 200px 305px no-repeat, url("./images/klass_avto-1200.svg") -359px -237px no-repeat';
+        workImg.style = style;
+        workButton.classList.add('work__options-item--active');
           workButton.classList.add('work__options-item--active');
           priceValue.textContent = pricesArray[index];
           };
@@ -298,11 +339,12 @@
         workButtons.forEach(item => {
           item.classList.remove('work__options-item--active');
         });
-        var position = '170px 480px';
-        if (index !== 2) {
-          position = '240px 480px';
+        workImg.setAttribute("src", imagesTabletArray[index]);
+        var style = "position: absolute; top: 30px; right: -330px;";
+        if (index != 2) {
+          style = "position: absolute; top: 50px; right: -330px;";
         }
-            workWrapper.style.background = 'url(' + imagesTabletArray[index] + ') no-repeat ' + position +',' + ' url("./images/klass_avto_tabletka.svg") -3px -115px no-repeat';
+        workImg.style = style;
             workButton.classList.add('work__options-item--active');
             priceValue.textContent = pricesArray[index];
           };
@@ -316,63 +358,61 @@
         workButtons.forEach(item => {
           item.classList.remove('work__options-item--active');
         });
-            workWrapper.style.background = 'url("./images/features-work-mobile-pseudo1.png") -57px -2px no-repeat, url(' + imagesMobileArray[index] + ') 0px 40px no-repeat';
-            workButton.classList.add('work__options-item--active');
+        workImg.setAttribute("src", imagesMobileArray[index]);
+        var style = "position: absolute; top: -190px; left: -15px;";
+        if (index != 2) {
+          style = "position: absolute; top: -190px; left: -0px;";
+        }
+        workImg.style = style;
+        workButton.classList.add('work__options-item--active');
             priceValue.textContent = pricesArray[index];
           };
         }
-    function onStartCallbacks() {
-      priceValue.textContent = pricesArray[findIndex()];
-      console.log(document.body.clientWidth);
-      if (document.body.clientWidth >= 1920) {
-        workWrapper.style.background = 'url(' + imagesArray[findIndex()] + ') 830px 280px no-repeat,' + ' url("./images/klass_avto.svg") 0px -247px no-repeat';
+      console.log(document.body.clientWidth + " " + document.body.offsetWidth);
+      console.log(window.innerWidth);
+      if (document.body.clientWidth >= 1898) {
+        var style = "position: absolute; top: 30px; right: -330px;";
+        if (findIndex() != 2) {
+          style = "position: absolute; top: 50px; right: -530px;";
+        }
+        workImg.setAttribute("src", imagesArray[findIndex()]);
+        workImg.style = style;
         workButtons.forEach((item, i) => {
           item.addEventListener("click", setDesktopBackground(item, i));
         });
       }
-      else if (document.body.clientWidth < 1920 && document.body.clientWidth >= 1200) {
-        var position = '610px 310px';
-        if (findIndex() === 0 || findIndex() === 4) {
-          position = '660px 370px';
+      else if (document.body.clientWidth < 1898 && document.body.clientWidth >= 1181) {
+        var style = "position: absolute; top: 30px; right: -330px;";
+        if (findIndex() != 2) {
+          style = "position: absolute; top: 50px; right: -530px;";
         }
-        if (findIndex() === 3 || findIndex() === 5) {
-          position = '650px 370px';
-        }
-        workWrapper.style.background = 'url(' + imagesArray[findIndex()] + ')' + position + ' no-repeat,' + ' url("./images/border-mini.svg") 200px 305px no-repeat, url("./images/klass_avto-1200.svg") -359px -237px no-repeat';
+        workImg.setAttribute("src", imagesArray[findIndex()]);
+        workImg.style = style;
         workButtons.forEach((item, i) => {
           item.addEventListener("click", setLaptopBackground(item, i));
         });
       }
-      else if (document.body.clientWidth < 1200 && document.body.clientWidth >= 768) {
-        var position = '170px 480px';
-        if (findIndex() !== 2) {
-          position = '240px 480px';
+      else if (document.body.clientWidth < 1181 && document.body.clientWidth >= 749) {
+        workImg.setAttribute("src", imagesTabletArray[findIndex()]);
+        var style = "position: absolute; top: 30px; right: -330px;";
+        if (findIndex() != 2) {
+          style = "position: absolute; top: 50px; right: -330px;";
         }
-        workWrapper.style.background = 'url(' + imagesTabletArray[findIndex()] + ') no-repeat ' + position +',' + ' url("./images/klass_avto_tabletka.svg") -3px -115px no-repeat';
+        workImg.style = style;
         workButtons.forEach((item, i) => {
           item.addEventListener("click", setTabletBackground(item, i));
         });
       }
       else {
-        workWrapper.style.background = 'url("./images/features-work-mobile-pseudo1.png") -57px -2px no-repeat, url(' + imagesMobileArray[findIndex()] + ') 0px 40px no-repeat';
-        workButtons.forEach((item, i) => {
+        workImg.setAttribute("src", imagesMobileArray[findIndex()]);
+        var style = "position: absolute; top: -190px; left: -15px;";
+        if (findIndex() != 2) {
+          style = "position: absolute; top: -190px; left: 0px;";
+        }
+        workImg.style = style;workButtons.forEach((item, i) => {
           item.addEventListener("click", setMobileBackground(item, i));
         });
       }
     }
-    window.onresize = function () {
-      onStartCallbacks();
-    };
-
-    function findIndex() {
-      var ind = 0;
-      workButtons.forEach((item, i) => {
-        if (item.classList.contains('work__options-item--active')) {
-          ind = i;
-        }
-      });
-      return ind;
-    }
-
-    onStartCallbacks();
+    ;*/
 })();
