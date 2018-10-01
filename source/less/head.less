@@ -4,7 +4,7 @@
 min-height: 900px;
 width: 1200px;
 margin: 0 auto;
-background: url("../images/head-desktop.png") 430px 320px no-repeat,
+background:
 url("../images/border-mini.svg") 190px 220px no-repeat,
 url("../images/kheder.svg") -195px 0 no-repeat;
 z-index: 5;
@@ -28,8 +28,7 @@ z-index: 5;
     margin: 0 auto;
     margin-top: -0px;
     padding-top: 20px;
-    background: url("../images/head-desktop.png") 640px 320px no-repeat,
-    url("../images/border.svg") 400px 220px no-repeat,
+    background:url("../images/border.svg") 400px 220px no-repeat,
     url("../images/kheder.svg") 16px 0 no-repeat;
     z-index: 5;
 
@@ -50,7 +49,6 @@ z-index: 5;
     width: 768px;
     margin: 0 auto;
     background:
-    url("../images/head-tablet.png") 35px 430px no-repeat,
     url("../images/kheder-tabletka.svg") 0px 52px no-repeat;
   });
   .mobile(@rules: {
@@ -166,8 +164,7 @@ width: 1200px;
     margin-top: 0;
     .flex-block();
     .flex-direction(column);
-    background: url("../images/head-mobile.png") 40px 180px no-repeat,
-    url("../images/head-mobile-pseudo3.png") 0px 140px no-repeat,
+    background: url("../images/head-mobile-pseudo3.png") 0px 140px no-repeat,
     url("../images/head-mobile-pseudo1.png") 50px 275px no-repeat,
     url("../images/head-mobile-pseudo2.png") 00px 290px no-repeat;
   });
@@ -175,6 +172,25 @@ width: 1200px;
   .aside {
     top: 75px;
   }
+}
+
+.head__img {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  .laptop(@rules: {
+    top: 70px;
+    right: -480px;
+  });
+  .tablet(@rules: {
+    top: 220px;
+    right: 0;
+  });
+
+  .mobile(@rules: {
+    top: 180px;
+    right: 0;
+  });
 }
 
 .head__content {
