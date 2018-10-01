@@ -256,32 +256,35 @@
     var priceValue = document.querySelector('.tabs__inner-price-value');
     function onStartCallbacks() {
       priceValue.textContent = pricesArray[findIndex()];
-      workButtons.forEach(function(item, i) {
+      for (var i = 0; i < workButtons.length; i++) {
+        var item = workButtons[i];
         item.addEventListener("click", setItemImg(item, i));
         item.classList.remove('work__options-item--active');
         workImgs[i].style = "display: none;";
-      });
+      }
       workImgs[findIndex()].style = "display: block;";
       workButtons[findIndex()].classList.add('work__options-item--active');
     }
 
     function findIndex() {
       var ind = 0;
-      workButtons.forEach(function (item, i) {
+      for (var i = 0; i < workButtons.length; i++) {
+        var item = workButtons[i];
         if (item.classList.contains('work__options-item--active')) {
           ind = i;
         }
-      });
+      }
       return ind;
     }
 
     function setItemImg(workButton, index) {
       return function (evt) {
         evt.preventDefault();
-        workButtons.forEach(function (item, i) {
-          item.classList.remove('work__options-item--active');
+        for (var i = 0; i < workButtons.length; i++) {
+          var item = workButtons[i];
+            item.classList.remove('work__options-item--active');
           workImgs[i].style = "display: none;";
-        });
+        }
         workImgs[index].style = "display: block;";
         workButton.classList.add('work__options-item--active');
         priceValue.textContent = pricesArray[index];
