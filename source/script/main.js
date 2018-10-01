@@ -265,8 +265,8 @@
 
       }
       //workImgs[findIndex()].style = "display: block;";
-      while (workImgs[i].classList.contains("visually-hidden")) {
-        workImgs[i].classList.remove("visually-hidden");
+      while (workImgs[findIndex()].classList.contains("visually-hidden")) {
+        workImgs[findIndex()].classList.remove("visually-hidden");
       }
       workButtons[findIndex()].classList.add('work__options-item--active');
     }
@@ -292,8 +292,8 @@
             workImgs[i].classList.add("visually-hidden");
         }
         //workImgs[findIndex()].style = "display: block;";
-        while (workImgs[i].classList.contains("visually-hidden")) {
-          workImgs[i].classList.remove("visually-hidden");
+        while (workImgs[index].classList.contains("visually-hidden")) {
+          workImgs[index].classList.remove("visually-hidden");
         }
         workButton.classList.add('work__options-item--active');
         priceValue.textContent = pricesArray[index];
