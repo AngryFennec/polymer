@@ -260,9 +260,14 @@
         var item = workButtons[i];
         item.addEventListener("click", setItemImg(item, i));
         item.classList.remove('work__options-item--active');
-        workImgs[i].style = "display: none;";
+        //workImgs[i].style = "display: none;";
+        workImgs[i].classList.add("visually-hidden");
+
       }
-      workImgs[findIndex()].style = "display: block;";
+      //workImgs[findIndex()].style = "display: block;";
+      while (workImgs[i].classList.contains("visually-hidden")) {
+        workImgs[i].classList.remove("visually-hidden");
+      }
       workButtons[findIndex()].classList.add('work__options-item--active');
     }
 
@@ -283,9 +288,13 @@
         for (var i = 0; i < workButtons.length; i++) {
           var item = workButtons[i];
             item.classList.remove('work__options-item--active');
-          workImgs[i].style = "display: none;";
+            //workImgs[i].style = "display: none;";
+            workImgs[i].classList.add("visually-hidden");
         }
-        workImgs[index].style = "display: block;";
+        //workImgs[findIndex()].style = "display: block;";
+        while (workImgs[i].classList.contains("visually-hidden")) {
+          workImgs[i].classList.remove("visually-hidden");
+        }
         workButton.classList.add('work__options-item--active');
         priceValue.textContent = pricesArray[index];
       };
